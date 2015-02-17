@@ -80,7 +80,7 @@ ORDER BY partidos.id ASC";
                 $i++;
                 echo "
                 <div class='panel panel-primary' style='max-width: 600px; margin: 0 auto;'>
-                <div class='panel-heading'>". $row['local']." vs " . $row['visitante'] . "</div>
+                <div class='panel-heading'>". $row['local']."<img src='" . $row['logo_local'] . "''> vs <img src='" . $row['logo_visitante'] . "'>". $row['visitante'] . "</div>
                   <div class='panel-body'>
                   </div>
                   <table class='table'>
