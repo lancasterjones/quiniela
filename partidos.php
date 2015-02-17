@@ -60,7 +60,9 @@
             <tr>
               <?php
                 echo  "<td>Local</td>" .
-                      "<td>Visitante</td>" ;
+                      "<td>Visitante</td>"
+                      "<td>Fecha</td>"
+                      "<td>Pronóstico</td>" ;
                 //$conn->close(); // Cerrar DB
                 ?>
             </tr>
