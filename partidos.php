@@ -39,7 +39,7 @@
         <h1>Champions League 2015</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 
-      <div class="panel panel-default">
+      <div class="panel panel-primary">
     <!-- Default panel contents -->
         <div class="panel-heading">Octavos de Final</div>
         <div class="panel-body">
@@ -55,16 +55,18 @@
             <th>Visitante</th>
             <th>Fecha</th>
           </tr></thead>
-          <tr>
-            <td>Local</td>
-            <td>Visitante</td>
-            <td>Fecha</td>
-          </tr>
-          <tr>
-            <td>Local</td>
-            <td>Visitante</td>
-            <td>Fecha</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Local</td>
+              <td>Visitante</td>
+              <td>Fecha</td>
+            </tr>
+            <tr>
+              <td>Local</td>
+              <td>Visitante</td>
+              <td>Fecha</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
