@@ -1,4 +1,4 @@
-<?php include '../conf/db.php'; ?> <!-- Conexión a DB -->
+<?php  include '../conf/db.php'; ?> <!-- Conexión a DB -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +49,14 @@
         </div>
 
         <!-- Table -->
+        <?php
+        $sql = "SELECT * FROM view_partidos";
+
+        //Correr Query
+        $result = mysqli_query($conn, $sql);
+        ?>
+
+
         <table class='table'>
           <thead><tr>
             <th>Local</th>
@@ -74,12 +82,7 @@
       </div>
       <br>
 
-      <?php
-      $sql = "SELECT * FROM view_partidos";
 
-      //Correr Query
-      $result = mysqli_query($conn, $sql);
-      ?>
 
       <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
@@ -114,7 +117,7 @@
               } else {
                 echo "<br>Sin Resultados";
               }
-              $conn->close(); // Cerrar DB ?>
+              $conn->close(); // Cerrar DB
             ?>
           </tbody>
         </table>
