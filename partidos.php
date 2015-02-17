@@ -68,9 +68,9 @@
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
                       "<td>Pronóstico</td></tr>" ;
-              } else {
+              } ; } else {
                 echo "<br>Sin Resultados";
-              }
+              };
                 //$conn->close(); // Cerrar DB
                 ?>
           </tbody>
