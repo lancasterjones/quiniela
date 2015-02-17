@@ -78,10 +78,10 @@ if ($conn->connect_error) {
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-                echo  "<tr><td>". $row['local']."</td>" .
-                      "<td>Visitante</td>" .
-                      "<td>Fecha</td>" .
-                      "<td>Pronóstico</td></tr>" ;
+                echo  "<tr><td>". $row['local'] ."</td>" .
+                      "<td>". $row['visitante'] ."</td>" .
+                      "<td>". $row['fecha'] ."</td>" .
+                      "<td><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></td></tr>" ;
               } ; } else {
                 echo "<br>Sin Resultados";
               };
