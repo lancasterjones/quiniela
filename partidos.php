@@ -32,6 +32,7 @@
         </div><!--/.nav-collapse -->
       </div>
 </nav>
+<body>
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Panel heading</div>
@@ -44,7 +45,7 @@
     ...
   </table>
 </div>
-
+</body>
 
 
 
