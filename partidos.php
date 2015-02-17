@@ -1,4 +1,4 @@
-<?php include '../conf/db.php'; ?>
+<?php include '/conf/db.php'; ?>
 
 <head>
     <meta charset="utf-8">
