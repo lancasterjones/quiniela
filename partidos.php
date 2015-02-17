@@ -57,9 +57,9 @@
     <!-- Default panel contents -->
         <div class="panel-heading">Octavos de Final</div>
         <div class="panel-body">
-          <p>1 Punto por acertar en resultado (Local, Empate, Visitante)</p>
-          <p>2 Puntos por acertar en marcador</p>
-          <p>3 puntos máximo por partido</p>
+          <p><strong>1 Punto </strong>por acertar en resultado (Local, Empate, Visitante)</p>
+          <p><strong>2 Puntos</strong>por acertar en marcador</p>
+          <p><strong>3 Puntos</strong> máximo por partido</p>
         </div>
 
         <!-- Table -->
