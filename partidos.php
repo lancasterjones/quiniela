@@ -36,7 +36,7 @@
 
   <div class="container">
     <div class="starter-template">
-        <h1>Champions League 2015</h1>
+        <h1>Partidos Siguientes</h1>
 
       <div class="panel panel-primary">
     <!-- Default panel contents -->
