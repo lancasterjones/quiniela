@@ -105,9 +105,9 @@
               {
               //  echo "Renglones: " . mysqli_num_rows($result);
               echo "<tr><td>" .
-              $row["local"] . "</td><td>";
-              $row["visitante"] . "</td><td>";
-              $row["fecha"] . "</td><td>";
+              $row["local"] . "</td><td>" .
+              $row["visitante"] . "</td><td>" .
+              $row["fecha"] . "</td><td>" .
               "<td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><tr>"
                 }
               } else {
