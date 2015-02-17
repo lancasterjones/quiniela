@@ -113,7 +113,7 @@ float: right;'> ".
        usuarios.nombre,
        pronosticos.goles_local,
        pronosticos.goles_visitante,
-           IF(pts_partido.pts_marcador = 'ok', '2', '0')
+           IF(pts_partido.pts_marcador = 'ok', '1', '0')
          * valor_puntos.pts_marcador
        +   IF(pts_partido.pts_resultado = 'ok', '1', '0')
          * valor_puntos.pts_resultado
