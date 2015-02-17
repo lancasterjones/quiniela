@@ -59,6 +59,9 @@
           <tbody>
             <tr>
               <?php
+              $sql = "SELECT * FROM view_partidos";
+              $query = mysqli_query($conn, $sql);
+
                 echo  "<td>Local</td>" .
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
