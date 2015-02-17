@@ -89,7 +89,7 @@ if ($conn->connect_error) {
             {
                 echo  "<tr><td><img src='". $row['logo_local'] ."' >". $row['local'] ."</td>" .
                       "<tr><td><img src='". $row['logo_visitante'] ."' >". $row['visitante'] ."</td>" .
-                      "<td>". echo date('M j Y g:i A', strtotime($row['fecha'])) ."</td>" .
+                      "<td>". date('M j Y g:i A', strtotime($row['fecha'])) ."</td>" .
                       "<td><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></td></tr>" ;
               } ; } else {
                 echo "<br>Sin Resultados";
