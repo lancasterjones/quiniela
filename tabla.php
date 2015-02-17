@@ -58,9 +58,6 @@
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Tabla General</div>
-        <div class="panel-body">
-        </div>
-
         <!-- Table -->
         <table class='table'>
           <thead><tr>
@@ -74,9 +71,12 @@
               $sql = "SELECT * FROM tabla ";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
+                $i = 0;
           while($row = mysqli_fetch_array($result))
-            {
-                echo  "<tr><td>". $row['nombre'] ."</td>" .
+            {   $i++:
+                echo  "<tr><td>". $row['nombre'];
+                if($i == 1){ echo "trofeo"};
+                echo  "</td>" .
                       "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
