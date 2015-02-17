@@ -79,7 +79,7 @@
             {
                 $i++;
                 echo  "<tr><td>". $row['nombre'] ;
-                if( $i == 1){ echo $i;};
+                if( $i == 1){ echo "<i class="fa fa-trophy"></i>";};
                 echo  "</td><td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
