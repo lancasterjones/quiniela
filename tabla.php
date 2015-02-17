@@ -55,11 +55,8 @@
 
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
-        <div class="panel-heading">Octavos de Final</div>
+        <div class="panel-heading">Tabla General</div>
         <div class="panel-body">
-          <p><strong>1 Punto </strong>por acertar en resultado (Local, Empate, Visitante)</p>
-          <p><strong>2 Puntos </strong>por acertar en marcador</p>
-          <p><strong>3 Puntos </strong>máximo por partido</p>
         </div>
 
         <!-- Table -->
@@ -80,7 +77,7 @@
                 echo  "<tr><td style='text-align: left;'>". $row['nombre'] ."</td>" .
                       "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
-                      "<td>". $row['puntos'] . " </td></tr>" ;
+                      "<td>". $row['pts_totales'] . " </td></tr>" ;
               } ; } else {
                 echo "<br>Sin Resultados";
               };
