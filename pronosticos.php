@@ -93,7 +93,18 @@ ORDER BY partidos.id ASC";
                       <th>Visitante</th>
                       <th>Puntos</th>
                     </tr></thead>
-                    <tbody>
+                    <tbody>";
+                    // DATOS AQUÍ
+                    $query_pronosticos = "SELECT usuarios.nombre,
+                                          pts_partido.pts_marcador + pts_partido.pts_resultado AS pts,
+                                          pts_partido.id_partido
+                                          FROM admin_shampions.pts_partido pts_partido
+                                          INNER JOIN admin_shampions.usuarios usuarios
+                                          ON (pts_partido.id_usuario = usuarios.id)
+                                          WHERE (pts_partido.id_partido = "$row['partidos.id']")";
+
+
+                    echo "
                     </tbody>
                   </table>
                 </div>
