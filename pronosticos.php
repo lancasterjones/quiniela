@@ -68,31 +68,34 @@
                 $i++;
                 echo "
                 <div class='panel panel-primary' style='max-width: 600px; margin: 0 auto;'>
-              <!-- Default panel contents -->
-                  <div class='panel-heading'>Tabla General</div>
+                <div class='panel-heading'>Tabla General</div>
                   <div class='panel-body'>
                   </div>
-                <!-- Table -->
-                <table class='table'>
-                  <thead><tr>
-                    <th>Nombre</th>
-                    <th>Local</th>
-                    <th>Visitante</th>
-                    <th>Puntos</th>
-                  </tr></thead>
-                  <tbody>
-                <tr><td>";
+                  <table class='table'>
+                    <thead><tr>
+                      <th>Nombre</th>
+                      <th>Local</th>
+                      <th>Visitante</th>
+                      <th>Puntos</th>
+                    </tr></thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+                  ";
+              };
+
+
               } else {
                 echo "<br>Sin Resultados";
               };
                 //$conn->close(); // Cerrar DB
                 ?>
-          </tbody>
-        </table>
+
       </div>
 
     </div>
-  </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
