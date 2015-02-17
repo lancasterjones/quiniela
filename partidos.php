@@ -61,11 +61,13 @@
               <?php
               $sql = "SELECT * FROM view_partidos";
               $query = mysqli_query($conn, $sql);
+              while($result = mysqli_fetch_array($query)){
 
                 echo  "<td>Local</td>" .
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
                       "<td>Pronóstico</td>" ;
+                    };
                 //$conn->close(); // Cerrar DB
                 ?>
             </tr>
