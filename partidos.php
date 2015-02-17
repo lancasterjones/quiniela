@@ -71,6 +71,7 @@
           </tbody>
         </table>
       </div>
+      <br>
       <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Cuartos de Final</div>
@@ -92,7 +93,50 @@
           </tbody>
         </table>
       </div>
+      <br>
+      <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
+    <!-- Default panel contents -->
+        <div class="panel-heading">Semi Finales</div>
+        <div class="panel-body">
+          <p>2 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
+          <p>4 Puntos por acertar en marcador</p>
+          <p>6 puntos máximo por partido</p>
+        </div>
 
+        <!-- Table -->
+        <table class='table'>
+          <thead><tr>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Fecha</th>
+            <th>Pronóstico</th>
+          </tr></thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
+    <!-- Default panel contents -->
+        <div class="panel-heading">Final</div>
+        <div class="panel-body">
+          <p>4 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
+          <p>8 Puntos por acertar en marcador</p>
+          <p>12 puntos máximo por partido</p>
+        </div>
+
+        <!-- Table -->
+        <table class='table'>
+          <thead><tr>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Fecha</th>
+            <th>Pronóstico</th>
+          </tr></thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
     <!-- Bootstrap core JavaScript
