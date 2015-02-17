@@ -43,12 +43,23 @@
     <!-- Default panel contents -->
         <div class="panel-heading">Octavos de Final</div>
         <div class="panel-body">
-          <p>...</p>
+          <p>1 Punto por acertar en resultado (Local, Empate, Visitante)</p>
+          <p>2 Puntos por acertar en marcador</p>
+          <p>3 puntos máximo por partido</p>
         </div>
 
         <!-- Table -->
-        <table class="table">
-          ...
+        <table class='table table-hover table-bordered' style='max-width: 400px; margin: auto; text-align: center'>
+          <thead><tr>
+            <th style='text-align:center;'>Local</th>
+            <th style='text-align:center;'>Visitante</th>
+            <th style='text-align:center;'>Fecha</th>
+          </tr></thead>
+          <tr>
+            <td>Local</td>
+            <td>Visitante</td>
+            <td>Fecha</td>
+          </tr>
         </table>
       </div>
     </div>
