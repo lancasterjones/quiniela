@@ -14,7 +14,7 @@
     vertical-align: middle !important; 
     text-align: center !important;
   }
-  td img {
+  .panel-heading img {
     width: 35px;
   }
   tr {
