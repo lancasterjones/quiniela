@@ -89,7 +89,9 @@ ORDER BY partidos.id ASC";
                   vs
                   <img src='" . $row['logo_visitante'] . "'>".
                   $row['visitante'] .
-                  " <strong> ".
+                  " <strong style='font-size: x-large;
+vertical-align: middle;
+float: right;'> ".
                   $row['goles_local'] .
                   " - " .
                   $row['goles_visitante'] .
