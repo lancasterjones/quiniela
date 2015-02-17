@@ -49,6 +49,11 @@
         </div>
 
         <!-- Table -->
+        <?php
+        echo "Inicio Body";
+          
+          $conn->close(); // Cerrar DB
+        ?>
 
         <table class='table'>
           <thead><tr>
@@ -95,7 +100,7 @@
             <th>Pronóstico</th>
           </tr></thead>
           <tbody>
-            
+
           </tbody>
         </table>
       </div>
