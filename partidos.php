@@ -59,7 +59,8 @@
           <tbody>
             <tr>
               <?php
-                echo "Inicio Body";
+                echo  "<td>Local</td>" .
+                      "<td>Visitante</td>" ;
                 //$conn->close(); // Cerrar DB
                 ?>
             </tr>
