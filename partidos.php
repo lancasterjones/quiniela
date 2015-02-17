@@ -78,7 +78,7 @@ if ($conn->connect_error) {
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-                echo  "<tr><td>Local</td>" .
+                echo  "<tr><td>". $row['local']."</td>" .
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
                       "<td>Pronóstico</td></tr>" ;
