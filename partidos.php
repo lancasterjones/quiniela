@@ -74,7 +74,6 @@ if ($conn->connect_error) {
               <?php
               $sql = "SELECT * FROM view_partidos WHERE ronda = 'Octavos' ";
               $result = mysqli_query($conn, $sql);
-              echo mysqli_num_rows($result);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
