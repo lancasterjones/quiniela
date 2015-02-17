@@ -59,11 +59,10 @@
           <tbody>
               <?php
               $sql = "SELECT * FROM view_partidos";
-              $query = mysqli_query($conn, $sql);
+              $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-
                 echo  "<tr><td>Local</td>" .
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
