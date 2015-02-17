@@ -79,6 +79,7 @@
             {
                 $i++;
                 echo  "<tr><td>". $row['nombre'] ."</td>" ;
+                if( $i == 1){ echo $i;};
                 echo  "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
