@@ -59,8 +59,8 @@
           <tbody>
             <tr>
               <?php
-                //echo "Inicio Body";
-                //$conn->close(); // Cerrar DB
+                echo "Inicio Body";
+                $conn->close(); // Cerrar DB
                 ?>
             </tr>
           </tbody>
