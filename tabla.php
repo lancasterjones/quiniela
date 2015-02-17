@@ -78,8 +78,8 @@
           while($row = mysqli_fetch_array($result))
             {
                 $i++;
-                echo  "<tr><td>". $row['nombre'] ."</td>" .
-                      "<td>". $row['resultados'] . "</td>" .
+                echo  "<tr><td>". $row['nombre'] ."</td>" ;
+                echo  "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
               } ; } else {
