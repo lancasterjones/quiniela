@@ -7,12 +7,12 @@
     <title>Champions League 2015</title>
 <style>
   th {
-    text-align: center;
+    text-align: center !important;
   }
   td {
     line-height: 35px !important;
     vertical-align: middle !important; 
-    text-align: center;
+    text-align: center !important;
   }
   td img {
     width: 35px;
