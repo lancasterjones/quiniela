@@ -38,7 +38,7 @@
     <div class="starter-template">
         <h1>Partidos Siguientes</h1>
 
-      <div class="panel panel-primary">
+      <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Octavos de Final</div>
         <div class="panel-body">
