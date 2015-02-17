@@ -68,7 +68,7 @@
             <th>Nombre</th>
             <th>Resultados</th>
             <th>Marcadores</th>
-            <th>Puntos</th>
+            <th>Pts</th>
           </tr></thead>
           <tbody>
               <?php
