@@ -34,17 +34,22 @@
 </nav>
 <body>
   <div class="container">
-    <div class="panel panel-default">
-  <!-- Default panel contents -->
-      <div class="panel-heading">Panel heading</div>
-      <div class="panel-body">
-        <p>...</p>
-      </div>
+    <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 
-      <!-- Table -->
-      <table class="table">
-        ...
-      </table>
+      <div class="panel panel-default">
+    <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body">
+          <p>...</p>
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+          ...
+        </table>
+      </div>
     </div>
   </div>
 </body>
