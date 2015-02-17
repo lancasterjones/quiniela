@@ -57,11 +57,12 @@
             <th>Pronóstico</th>
           </tr></thead>
           <tbody>
-            <?php
+            <tr><?php
             echo "Inicio Body";
-            
+
               $conn->close(); // Cerrar DB
             ?>
+            </tr>
           </tbody>
         </table>
       </div>
