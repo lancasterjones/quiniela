@@ -87,8 +87,8 @@ if ($conn->connect_error) {
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-                echo  "<tr><td><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
-                      "<td><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
+                echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
+                      "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
                       "<td>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
                       "<td><a href=''><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
               } ; } else {
