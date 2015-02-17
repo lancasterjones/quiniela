@@ -81,7 +81,7 @@
                 $i++;
 
                 echo "<tr><td>";
-                if( $i == 1){ echo "<i style='color: yellow' class='fa fa-trophy fa-2x'></i> ";};
+                if( $i == 1){ echo "<i style='color: #C0C0C0' class='fa fa-trophy fa-2x'></i> ";};
                 echo  $row['nombre'] .
                       "</td><td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
