@@ -34,7 +34,7 @@
       </div>
     </nav><br><br>
 
-  <div class="container">
+  <div class="container" style="max-width: 700px;">
     <div class="starter-template">
         <h1>Partidos Siguientes</h1>
 
@@ -71,6 +71,28 @@
           </tbody>
         </table>
       </div>
+      <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
+    <!-- Default panel contents -->
+        <div class="panel-heading">Cuartos de Final</div>
+        <div class="panel-body">
+          <p>2 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
+          <p>4 Puntos por acertar en marcador</p>
+          <p>6 puntos máximo por partido</p>
+        </div>
+
+        <!-- Table -->
+        <table class='table'>
+          <thead><tr>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Fecha</th>
+            <th>Pronóstico</th>
+          </tr></thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
     <!-- Bootstrap core JavaScript
