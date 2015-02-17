@@ -72,7 +72,7 @@ if ($conn->connect_error) {
           </tr></thead>
           <tbody>
               <?php
-              $sql = "SELECT * FROM view_partidos";
+              $sql = "SELECT * FROM view_partidos WHERE ronda = 'Octavos' ";
               $result = mysqli_query($conn, $sql);
               echo mysqli_num_rows($result);
               if (mysqli_num_rows($result) > 0) {
