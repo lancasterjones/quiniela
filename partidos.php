@@ -77,7 +77,7 @@ if ($conn->connect_error) {
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-                echo  "<tr><td><img width='45' src='". $row['fotolocal'] ."' >". $row['local'] ."</td>" .
+                echo  "<tr><td><img width='45' src='". $row['logo_local'] ."' >". $row['local'] ."</td>" .
                       "<td>". $row['visitante'] ."</td>" .
                       "<td>". $row['fecha'] ."</td>" .
                       "<td><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></td></tr>" ;
