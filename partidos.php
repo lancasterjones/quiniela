@@ -60,7 +60,7 @@
             <tr>
               <?php
                 echo "Inicio Body";
-                $conn->close(); // Cerrar DB
+                //$conn->close(); // Cerrar DB
                 ?>
             </tr>
           </tbody>
