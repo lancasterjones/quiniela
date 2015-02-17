@@ -105,6 +105,7 @@ ORDER BY partidos.id ASC";
                     </tr></thead>
                     <tbody>";
                     // DATOS AQUÍ
+                    $partido = $i;
                     $query_pronosticos = "SELECT DISTINCT pronosticos.id_partido,
                                               usuarios.nombre,
                                               pronosticos.goles_local,
@@ -115,7 +116,7 @@ ORDER BY partidos.id ASC";
                                               ON (pronosticos.id_usuario = usuarios.id))
                                               INNER JOIN admin_shampions.pts_partido pts_partido
                                               ON (pronosticos.id_usuario = pts_partido.id_usuario)
-                                              WHERE (pronosticos.id_partido = ". $row['partidos.id'] . ")";
+                                              WHERE (pronosticos.id_partido = ". $partido . ")";
                     $resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
 
                     while($linea = mysqli_fetch_array($resultado_pronosticos))
