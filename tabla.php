@@ -68,16 +68,13 @@
           </tr></thead>
           <tbody>
               <?php
-              $i = 0;
               $sql = "SELECT * FROM tabla ";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
-
+                $i = 0;
           while($row = mysqli_fetch_array($result))
             {   $i++:
-                echo  "<tr><td>". $row['nombre'];
-                //if ($i == 1) { echo "<i class='fa fa-trophy'></i>";};
-                echo  "</td>" .
+                echo  "<tr><td>". $row['nombre'] . "</td>" .
                       "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
