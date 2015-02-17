@@ -126,7 +126,8 @@ ORDER BY partidos.id ASC";
        INNER JOIN admin_shampions.valor_puntos valor_puntos
           ON (valor_puntos.ronda = partidos.ronda)
  WHERE pronosticos.id_partido = '$partido'
-GROUP BY usuarios.nombre";
+GROUP BY usuarios.nombre
+ORDER BY puntos DESC";
                     $resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
 
                     while($linea = mysqli_fetch_array($resultado_pronosticos))
