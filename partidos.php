@@ -60,13 +60,17 @@
               <?php
               $sql = "SELECT * FROM view_partidos";
               $query = mysqli_query($conn, $sql);
-              while($result = mysqli_fetch_array($query)){
+              if (mysqli_num_rows($result) > 0) {
+          while($row = mysqli_fetch_array($result))
+            {
 
                 echo  "<tr><td>Local</td>" .
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
                       "<td>Pronóstico</td></tr>" ;
-                    };
+              } else {
+                echo "<br>Sin Resultados";
+              }
                 //$conn->close(); // Cerrar DB
                 ?>
           </tbody>
