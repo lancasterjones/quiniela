@@ -1,7 +1,7 @@
 <?php
 $servername = "104.236.137.39";
 $username = "admin_shampions";
-$password = "AlrorO";
+$password = "AlrorOaaa";
 $db = "admin_shampions";
 
 // Conectar
