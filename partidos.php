@@ -20,8 +20,8 @@ if ($conn->connect_error) {
     <title>Champions League 2015</title>
 <style>
   td {
-    line-height: 35px;
-    vertical-align: middle;
+    line-height: 35px !important;
+    vertical-align: middle !important; 
     text-align: center;
   }
   td img {
