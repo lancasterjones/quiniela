@@ -17,8 +17,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="/partidos.php">Partidos</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li class="active"><a href="/partidos.php">Partidos</a></li>
             <li><a href="/pronosticos.php">Pronósticos</a></li>
             <li><a href="/tabla.php">Tabla</a></li>
           </ul>
