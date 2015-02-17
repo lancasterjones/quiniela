@@ -60,7 +60,19 @@
 
               <?php
               $i = 0;
-              $sql = "SELECT * FROM partidos";
+              $sql = "SELECT partidos.id,
+       equipos.nombre AS local,
+       equipos.logo AS logo_local,
+       equipos_1.nombre AS visitante,
+       equipos_1.logo AS logo_visitante,
+       partidos.goles_local,
+       partidos.goles_visitante
+  FROM (admin_shampions.partidos partidos
+        INNER JOIN admin_shampions.equipos equipos_1
+           ON (partidos.visitante = equipos_1.id))
+       INNER JOIN admin_shampions.equipos equipos
+          ON (partidos.local = equipos.id)
+ORDER BY partidos.id ASC";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
@@ -82,6 +94,7 @@
                     </tbody>
                   </table>
                 </div>
+                <br>
                   ";
               };
 
