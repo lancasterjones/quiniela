@@ -18,6 +18,16 @@ if ($conn->connect_error) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Champions League 2015</title>
+<style>
+  td {
+    line-height: 35px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  td img {
+    width: 45px;
+  }
+</style>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -78,7 +88,7 @@ if ($conn->connect_error) {
           while($row = mysqli_fetch_array($result))
             {
                 echo  "<tr><td><img width='45' src='". $row['logo_local'] ."' >". $row['local'] ."</td>" .
-                      "<td>". $row['visitante'] ."</td>" .
+                      "<tr><td><img src='". $row['logo_visitante'] ."' >". $row['visitante'] ."</td>" .
                       "<td>". $row['fecha'] ."</td>" .
                       "<td><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></td></tr>" ;
               } ; } else {
