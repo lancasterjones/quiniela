@@ -57,20 +57,18 @@
             <th>Pronóstico</th>
           </tr></thead>
           <tbody>
-            <tr>
               <?php
               $sql = "SELECT * FROM view_partidos";
               $query = mysqli_query($conn, $sql);
               while($result = mysqli_fetch_array($query)){
 
-                echo  "<td>Local</td>" .
+                echo  "<tr><td>Local</td>" .
                       "<td>Visitante</td>" .
                       "<td>Fecha</td>" .
-                      "<td>Pronóstico</td>" ;
+                      "<td>Pronóstico</td></tr>" ;
                     };
                 //$conn->close(); // Cerrar DB
                 ?>
-            </tr>
           </tbody>
         </table>
       </div>
