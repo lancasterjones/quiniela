@@ -75,7 +75,7 @@
           while($row = mysqli_fetch_array($result))
             {   $i++:
                 echo  "<tr><td>". $row['nombre'];
-                if($i == 1){ echo "trofeo"};
+                if($i === 1){ echo "<i class="fa fa-trophy"></i>";};
                 echo  "</td>" .
                       "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
