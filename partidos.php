@@ -49,12 +49,6 @@
         </div>
 
         <!-- Table -->
-        <?php
-        echo "Inicio Body";
-          
-          $conn->close(); // Cerrar DB
-        ?>
-
         <table class='table'>
           <thead><tr>
             <th>Local</th>
@@ -63,18 +57,11 @@
             <th>Pronóstico</th>
           </tr></thead>
           <tbody>
-            <tr>
-              <td>Local</td>
-              <td>Visitante</td>
-              <td>Fecha</td>
-              <td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
-            </tr>
-            <tr>
-              <td>Local</td>
-              <td>Visitante</td>
-              <td>Fecha</td>
-              <td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
-            </tr>
+            <?php
+            echo "Inicio Body";
+            
+              $conn->close(); // Cerrar DB
+            ?>
           </tbody>
         </table>
       </div>
