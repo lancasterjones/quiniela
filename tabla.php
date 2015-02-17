@@ -47,7 +47,7 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </nav><br><br>
+    </nav><br><br><br><br>
 
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
@@ -73,7 +73,7 @@
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-                echo  "<tr><td style='text-align: left;'>". $row['nombre'] ."</td>" .
+                echo  "<tr><td>". $row['nombre'] ."</td>" .
                       "<td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
