@@ -66,12 +66,15 @@
        equipos_1.nombre AS visitante,
        equipos_1.logo AS logo_visitante,
        partidos.goles_local,
-       partidos.goles_visitante
+       partidos.goles_visitante,
+       DATE_SUB(partidos.fecha, INTERVAL 1 HOUR),
+       DATE_ADD(NOW(), INTERVAL 1 HOUR)
   FROM (admin_shampions.partidos partidos
         INNER JOIN admin_shampions.equipos equipos_1
            ON (partidos.visitante = equipos_1.id))
        INNER JOIN admin_shampions.equipos equipos
           ON (partidos.local = equipos.id)
+ WHERE (partidos.fecha BETWEEN DATE_SUB(partidos.fecha, INTERVAL 1 HOUR) AND DATE_ADD(NOW(), INTERVAL 1 HOUR))
 ORDER BY partidos.id ASC";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
