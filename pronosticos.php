@@ -87,7 +87,7 @@ ORDER BY partidos.id ASC";
                   $row['local'].
                   "<img src='" . $row['logo_local'] . "''>
                   vs
-                  <img src='" . $row['logo_visitante'] . "'>". 
+                  <img src='" . $row['logo_visitante'] . "'>".
                   $row['visitante'] .
                   "<strong>".
                   $row['partidos.goles_local'] .
@@ -115,7 +115,7 @@ ORDER BY partidos.id ASC";
                                               ON (pronosticos.id_usuario = usuarios.id))
                                               INNER JOIN admin_shampions.pts_partido pts_partido
                                               ON (pronosticos.id_usuario = pts_partido.id_usuario)
-                                              WHERE (pronosticos.id_partido = 1)";
+                                              WHERE (pronosticos.id_partido = ". $row['partidos_id'] . ")";
                     $resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
 
                     while($linea = mysqli_fetch_array($resultado_pronosticos))
