@@ -79,8 +79,8 @@
             {
                 echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
                       "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
-                      "<td>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
-                      "<td><a href=''><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
+                      "<td style='text-align: center;'>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
+                      "<td style='text-align: center;'><a href=''><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
               } ; } else {
                 echo "<br>Sin Resultados";
               };
