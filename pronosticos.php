@@ -95,17 +95,27 @@ ORDER BY partidos.id ASC";
                     </tr></thead>
                     <tbody>";
                     // DATOS AQUÍ
-                    $query_pronosticos = "SELECT usuarios.nombre,
-                                          pts_partido.pts_marcador + pts_partido.pts_resultado AS pts,
-                                          pts_partido.id_partido
-                                          FROM admin_shampions.pts_partido pts_partido
-                                          INNER JOIN admin_shampions.usuarios usuarios
-                                          ON (pts_partido.id_usuario = usuarios.id)
-                                          WHERE (pts_partido.id_partido = 1)";
+                    $query_pronosticos = "SELECT DISTINCT pronosticos.id_partido,
+                                              usuarios.nombre,
+                                              pronosticos.goles_local,
+                                              pronosticos.goles_visitante,
+                                              pts_partido.pts_marcador + pts_partido.pts_resultado AS pts
+                                              FROM (admin_shampions.pronosticos pronosticos
+                                              INNER JOIN admin_shampions.usuarios usuarios
+                                              ON (pronosticos.id_usuario = usuarios.id))
+                                              INNER JOIN admin_shampions.pts_partido pts_partido
+                                              ON (pronosticos.id_usuario = pts_partido.id_usuario)
+                                              WHERE (pronosticos.id_partido = 1)";
                     $resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
 
                     while($linea = mysqli_fetch_array($resultado_pronosticos))
-                    {echo "<tr><td>" . $linea['nombre'] . "</td></tr>";};
+                    {echo "<tr>
+                            <td>" . $linea['nombre'] . "</td>
+                            <td>" . $linea['goles_local'] . "</td>
+                            <td>" . $linea['goles_visitante'] . "</td>
+                            <td>" . $linea['pts'] . "</td>
+
+                      </tr>";};
                     // FIN DATOS
                     echo "
                     </tbody>
