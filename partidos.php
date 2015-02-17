@@ -32,16 +32,16 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </nav>
+    </nav><br><br>
 
   <div class="container">
     <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
+        <h1>Champions League 2015</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 
       <div class="panel panel-default">
     <!-- Default panel contents -->
-        <div class="panel-heading">Panel heading</div>
+        <div class="panel-heading">Octavos de Final</div>
         <div class="panel-body">
           <p>...</p>
         </div>
