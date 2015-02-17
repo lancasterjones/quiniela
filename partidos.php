@@ -1,3 +1,4 @@
+<?php include '../conf/db.php'; ?> <!-- Conexión a DB -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,7 +73,15 @@
         </table>
       </div>
       <br>
-      <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
+
+      <?php
+      $sql = "SELECT * FROM view_partidos";
+
+      //Correr Query
+      $result = mysqli_query($conn, $sql);
+      ?>
+
+      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Cuartos de Final</div>
         <div class="panel-body">
@@ -90,11 +99,27 @@
             <th>Pronóstico</th>
           </tr></thead>
           <tbody>
+            <?php
+              if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_array($result))
+              {
+              //  echo "Renglones: " . mysqli_num_rows($result);
+              echo "<tr><td>" .
+              $row["local"] . "</td><td>";
+              $row["visitante"] . "</td><td>";
+              $row["fecha"] . "</td><td>";
+              "<td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><tr>"
+                }
+              } else {
+                echo "<br>Sin Resultados";
+              }
+              $conn->close(); // Cerrar DB ?>
+            ?>
           </tbody>
         </table>
       </div>
       <br>
-      <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
+      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Semi Finales</div>
         <div class="panel-body">
@@ -116,7 +141,7 @@
         </table>
       </div>
       <br>
-      <div class="panel panel-info" style="max-width: 600px; margin: 0 auto;">
+      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Final</div>
         <div class="panel-body">
