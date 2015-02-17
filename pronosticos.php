@@ -90,9 +90,9 @@ ORDER BY partidos.id ASC";
                   <img src='" . $row['logo_visitante'] . "'>".
                   $row['visitante'] .
                   "<strong>".
-                  $row['partidos.goles_local'] .
+                  $row['goles_local'] .
                   " - " .
-                  $row['partidos.goles_visitante'] .
+                  $row['goles_visitante'] .
                   "</strong></div>
                   <div class='panel-body'>
                   </div>
