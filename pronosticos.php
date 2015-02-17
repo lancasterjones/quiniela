@@ -101,8 +101,8 @@ ORDER BY partidos.id ASC";
                                           FROM admin_shampions.pts_partido pts_partido
                                           INNER JOIN admin_shampions.usuarios usuarios
                                           ON (pts_partido.id_usuario = usuarios.id)
-                                          WHERE (pts_partido.id_partido = "$row['partidos.id']")";
-                    $resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
+                                          WHERE (pts_partido.id_partido = " . $row['partidos.id'] .")";
+                    //$resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
                     //while($linea = mysqli_fetch_array($resultado_pronosticos))
                     //{echo "<tr><td>" . $linea['nombre'] . "</td></tr>";};
                     // FIN DATOS
