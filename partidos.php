@@ -33,18 +33,20 @@
       </div>
 </nav>
 <body>
-<div class="panel panel-default">
+  <div class="container">
+    <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
-  <div class="panel-body">
-    <p>...</p>
-  </div>
+      <div class="panel-heading">Panel heading</div>
+      <div class="panel-body">
+        <p>...</p>
+      </div>
 
-  <!-- Table -->
-  <table class="table">
-    ...
-  </table>
-</div>
+      <!-- Table -->
+      <table class="table">
+        ...
+      </table>
+    </div>
+  </div>
 </body>
 
 
