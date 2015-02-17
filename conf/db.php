@@ -5,10 +5,10 @@ $password = "AlrorO";
 $db = "admin_shampions";
 
 // Conectar
-$conn = new mysqli($servername, $username, $password, $db) or die("Some error occurred during connection " . mysqli_error($connares));
+$conn = new mysqli($servername, $username, $password, $db) or die("Some error occurred during connection " . mysqli_error($conn));
 // Check connection
-if ($connares->connect_error) {
-    die("Conexión a Shampions DB falló: " . $connares->connect_error);
+if ($conn->connect_error) {
+    die("Conexión a Shampions DB falló: " . $conn->connect_error);
 }
 
 ?>
