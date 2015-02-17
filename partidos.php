@@ -11,9 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 </head>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
+<div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -22,16 +20,16 @@
           </button>
           <a class="navbar-brand" href="#">Champions League 2015</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li class="active"><a href="/partidos.php">Partidos</a></li>
             <li><a href="/pronosticos.php">Pronósticos</a></li>
             <li><a href="/tabla.php">Tabla</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-</nav>
+    </nav>
 <body>
   <div class="container">
     <div class="starter-template">
