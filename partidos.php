@@ -1,4 +1,18 @@
-<?php  include '../conf/db.php'; ?> <!-- Conexión a DB -->
+<?php
+$servername = "104.236.137.39";
+$username = "admin_shampions";
+$password = "AlrorO332";
+$db = "admin_shampions";
+
+// Conectar
+$conn = new mysqli($servername, $username, $password, $db) or die("Some error occurred during connection " . mysqli_error($conn));
+// Check connection
+if ($conn->connect_error) {
+    die("Conexión a Shampions DB falló: " . $conn->connect_error);
+}
+
+?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,6 +74,7 @@
               <?php
               $sql = "SELECT * FROM view_partidos";
               $result = mysqli_query($conn, $sql);
+              echo mysqli_num_rows($result);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
