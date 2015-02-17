@@ -37,7 +37,6 @@
   <div class="container">
     <div class="starter-template">
         <h1>Champions League 2015</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 
       <div class="panel panel-primary">
     <!-- Default panel contents -->
@@ -54,17 +53,20 @@
             <th>Local</th>
             <th>Visitante</th>
             <th>Fecha</th>
+            <th>Pronóstico</th>
           </tr></thead>
           <tbody>
             <tr>
               <td>Local</td>
               <td>Visitante</td>
               <td>Fecha</td>
+              <td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
             </tr>
             <tr>
               <td>Local</td>
               <td>Visitante</td>
               <td>Fecha</td>
+              <td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
             </tr>
           </tbody>
         </table>
