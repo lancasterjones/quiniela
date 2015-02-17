@@ -106,17 +106,27 @@ ORDER BY partidos.id ASC";
                     <tbody>";
                     // DATOS AQUÍ
                     $partido = $i;
-                    $query_pronosticos = "SELECT DISTINCT pronosticos.id_partido,
-                                              usuarios.nombre,
-                                              pronosticos.goles_local,
-                                              pronosticos.goles_visitante,
-                                              pts_partido.pts_marcador + pts_partido.pts_resultado AS pts
-                                              FROM (admin_shampions.pronosticos pronosticos
-                                              INNER JOIN admin_shampions.usuarios usuarios
-                                              ON (pronosticos.id_usuario = usuarios.id))
-                                              INNER JOIN admin_shampions.pts_partido pts_partido
-                                              ON (pronosticos.id_usuario = pts_partido.id_usuario)
-                                              WHERE (pronosticos.id_partido = '$partido' )";
+                    $query_pronosticos = "SELECT DISTINCT
+       pronosticos.id_partido,
+       usuarios.nombre,
+       pronosticos.goles_local,
+       pronosticos.goles_visitante,
+           IF(pts_partido.pts_marcador = 'ok', '2', '0')
+         * valor_puntos.pts_marcador
+       +   IF(pts_partido.pts_resultado = 'ok', '1', '0')
+         * valor_puntos.pts_resultado
+          AS puntos
+  FROM (((admin_shampions.pronosticos pronosticos
+          INNER JOIN admin_shampions.pts_partido pts_partido
+             ON (pronosticos.id_usuario = pts_partido.id_usuario))
+         INNER JOIN admin_shampions.usuarios usuarios
+            ON (pronosticos.id_usuario = usuarios.id))
+        INNER JOIN admin_shampions.partidos partidos
+           ON (partidos.id = pts_partido.id_partido))
+       INNER JOIN admin_shampions.valor_puntos valor_puntos
+          ON (valor_puntos.ronda = partidos.ronda)
+ WHERE pronosticos.id_partido = '$partido'
+GROUP BY usuarios.nombre";
                     $resultado_pronosticos = mysqli_query($conn, $query_pronosticos);
 
                     while($linea = mysqli_fetch_array($resultado_pronosticos))
@@ -124,7 +134,7 @@ ORDER BY partidos.id ASC";
                             <td>" . $linea['nombre'] . "</td>
                             <td>" . $linea['goles_local'] . "</td>
                             <td>" . $linea['goles_visitante'] . "</td>
-                            <td>" . $linea['pts'] . "</td>
+                            <td>" . $linea['puntos'] . "</td>
 
                       </tr>";};
                     // FIN DATOS
