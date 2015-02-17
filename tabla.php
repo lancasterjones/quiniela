@@ -17,6 +17,9 @@
   td img {
     width: 35px;
   }
+  tr {
+    text-align: center;
+  }
 </style>
 
 <!-- Latest compiled and minified CSS -->
