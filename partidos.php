@@ -49,13 +49,6 @@
         </div>
 
         <!-- Table -->
-        <?php
-        $sql = "SELECT * FROM view_partidos";
-
-        //Correr Query
-        $result = mysqli_query($conn, $sql);
-        ?>
-
 
         <table class='table'>
           <thead><tr>
@@ -102,23 +95,7 @@
             <th>Pronóstico</th>
           </tr></thead>
           <tbody>
-            <?php
-            echo "Inicio Body";
-              if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_array($result))
-              {
-              //  echo "Renglones: " . mysqli_num_rows($result);
-              echo "<tr><td>" .
-              $row["local"] . "</td><td>" .
-              $row["visitante"] . "</td><td>" .
-              $row["fecha"] . "</td><td>" .
-              "<td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><tr>"
-                }
-              } else {
-                echo "<br>Sin Resultados";
-              }
-              $conn->close(); // Cerrar DB
-            ?>
+            
           </tbody>
         </table>
       </div>
