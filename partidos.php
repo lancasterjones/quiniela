@@ -49,12 +49,17 @@
         </div>
 
         <!-- Table -->
-        <table class='table table-hover table-bordered' style='max-width: 400px; margin: auto; text-align: center'>
+        <table class='table'>
           <thead><tr>
-            <th style='text-align:center;'>Local</th>
-            <th style='text-align:center;'>Visitante</th>
-            <th style='text-align:center;'>Fecha</th>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Fecha</th>
           </tr></thead>
+          <tr>
+            <td>Local</td>
+            <td>Visitante</td>
+            <td>Fecha</td>
+          </tr>
           <tr>
             <td>Local</td>
             <td>Visitante</td>
