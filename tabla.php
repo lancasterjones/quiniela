@@ -41,9 +41,9 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Inicio</a></li>
-            <li class="active"><a href="/partidos.php">Partidos</a></li>
+            <li><a href="/partidos.php">Partidos</a></li>
             <li><a href="/pronosticos.php">Pronósticos</a></li>
-            <li><a href="/tabla.php">Tabla</a></li>
+            <li class="active"><a href="/tabla.php">Tabla</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -65,22 +65,22 @@
         <!-- Table -->
         <table class='table'>
           <thead><tr>
-            <th>Local</th>
-            <th>Visitante</th>
-            <th>Fecha</th>
-            <th>Pronóstico</th>
+            <th>Nombre</th>
+            <th>Resultados</th>
+            <th>Marcadores</th>
+            <th>Puntos</th>
           </tr></thead>
           <tbody>
               <?php
-              $sql = "SELECT * FROM view_partidos WHERE ronda = 'Octavos' ";
+              $sql = "SELECT * FROM tabla ";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
             {
-                echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
-                      "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
-                      "<td style='text-align: center;'>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
-                      "<td style='text-align: center;'><a href=''><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
+                echo  "<tr><td style='text-align: left;'>". $row['nombre'] ."</td>" .
+                      "<td>". $row['resultados'] . "</td>" .
+                      "<td>". $row['marcadores'] . "</td>" .
+                      "<td>". $row['puntos'] . " </td></tr>" ;
               } ; } else {
                 echo "<br>Sin Resultados";
               };
@@ -89,76 +89,7 @@
           </tbody>
         </table>
       </div>
-      <br>
 
-
-
-      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
-    <!-- Default panel contents -->
-        <div class="panel-heading">Cuartos de Final</div>
-        <div class="panel-body">
-          <p>2 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
-          <p>4 Puntos por acertar en marcador</p>
-          <p>6 puntos máximo por partido</p>
-        </div>
-
-        <!-- Table -->
-        <table class='table'>
-          <thead><tr>
-            <th>Local</th>
-            <th>Visitante</th>
-            <th>Fecha</th>
-            <th>Pronóstico</th>
-          </tr></thead>
-          <tbody>
-
-          </tbody>
-        </table>
-      </div>
-      <br>
-      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
-    <!-- Default panel contents -->
-        <div class="panel-heading">Semi Finales</div>
-        <div class="panel-body">
-          <p>2 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
-          <p>4 Puntos por acertar en marcador</p>
-          <p>6 puntos máximo por partido</p>
-        </div>
-
-        <!-- Table -->
-        <table class='table'>
-          <thead><tr>
-            <th>Local</th>
-            <th>Visitante</th>
-            <th>Fecha</th>
-            <th>Pronóstico</th>
-          </tr></thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
-      <br>
-      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
-    <!-- Default panel contents -->
-        <div class="panel-heading">Final</div>
-        <div class="panel-body">
-          <p>4 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
-          <p>8 Puntos por acertar en marcador</p>
-          <p>12 puntos máximo por partido</p>
-        </div>
-
-        <!-- Table -->
-        <table class='table'>
-          <thead><tr>
-            <th>Local</th>
-            <th>Visitante</th>
-            <th>Fecha</th>
-            <th>Pronóstico</th>
-          </tr></thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
     </div>
   </div>
     <!-- Bootstrap core JavaScript
