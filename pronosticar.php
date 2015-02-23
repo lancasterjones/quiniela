@@ -84,10 +84,10 @@ sec_session_start();
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) > 0) {
-                echo "<td>Con Resultados<td>";
-                echo "<td>". mysqli_num_rows($result) . "</td>";
+                echo "<tr><td>Con Resultados<td>";
+                echo "<td>". mysqli_num_rows($result) . "</td></tr>";
                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                printf ("<td>%s</td><td>%s</td>", $row["goles_local"], $row["goles_visitante"]);
+                printf ("<tr><td>%s</td><td>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
 
                   /*while($row = mysqli_fetch_array($result))
                   {
