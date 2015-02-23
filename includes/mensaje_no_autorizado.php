@@ -8,4 +8,3 @@ No estás autorizado para ver esta página.<br>
 Por favor <a href="login.php">ingresa a tu cuenta</a>
 </div>
 ';
-?>
