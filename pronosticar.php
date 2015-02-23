@@ -84,7 +84,7 @@ sec_session_start();
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) = 0) {
-                echo "<br>Sin Resultados";  }
+                echo "<br>Sin Resultados";  } ;
             /*    else {
                     while($row = mysqli_fetch_array($result))
                     {
