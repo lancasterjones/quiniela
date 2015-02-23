@@ -82,15 +82,17 @@ sec_session_start();
                       WHERE id_partido = '$id_partido' AND
                       id_usuario =  '$id_usuario' ";
               $result = mysqli_query($conn, $sql);
-              /*
-              if (mysqli_num_rows($result) > 0) {
-          while($row = mysqli_fetch_array($result))
-            {
+
+              if (mysqli_num_rows($result) = 0) {
+                echo "<br>Sin Resultados";  }
+            /*    else {
+                    while($row = mysqli_fetch_array($result))
+                    {
                 echo  "<tr><td> . $row['goles_local'] . </td>" .
                       "<td> . $row['goles_visitante'] . </td></tr>" ;
-              } ; } else {
-                echo "<br>Sin Resultados";
-              };
+
+
+              };};
                 //$conn->close(); // Cerrar DB
                 */ ?>
           </tbody>
