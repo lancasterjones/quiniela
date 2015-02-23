@@ -76,6 +76,7 @@ sec_session_start();
           </tr></thead>
           <tbody>
               <?php
+              $accion = "Cambiar";
               /* $id_usuario = htmlentities($_SESSION['user_id']) */;
               $sql = "SELECT *
                       FROM pronosticos_prueba
@@ -94,7 +95,7 @@ sec_session_start();
 
             }*/ }
                  else {
-                  /*echo "<br>Sin Resultados";*/
+                  $accion = "Agregar";
                 }
                 //$conn->close(); // Cerrar DB
                 ?>
@@ -104,16 +105,16 @@ sec_session_start();
         <form action="editar.php" method="post">
           <tr><td>
               <input type="hidden" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
-                <!--label for="local">Goles de Local:</label-->
+
               <input type="text" name="goles_local" id="goles_local">
             </td>
             <td>
-              <label for="local">Goles de Visitante:</label>
+
               <input type="text" name="goles_visitante" id="goles_visitante">
             </td>
           </tbody>
         </table>
-            <input type="submit" value="Agregar">
+            <input type="submit" value=".<?php $accion ?>.">
         </form>
 
 
