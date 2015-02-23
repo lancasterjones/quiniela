@@ -93,9 +93,6 @@ sec_session_start();
            ?>
         </div>
         <table class='table'>
-          <thead><tr>
-
-          </tr></thead>
           <tbody>
               <?php
 
