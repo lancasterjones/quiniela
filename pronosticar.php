@@ -86,7 +86,7 @@ sec_session_start();
           printf("<th><img src='%s'></th>
                   <th><img src='%s'></th>",
                   $rows['logo_local'],
-                  $rows['logo_visitante']),
+                  $rows['logo_visitante'])
            ?>
           </tr></thead>
           <tbody>
