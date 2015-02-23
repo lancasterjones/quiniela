@@ -86,8 +86,8 @@ if (login_check($mysqli) == true) {
                 <span style="width:88px" class="input-group-addon" id="basic-addon1">Password</span>
                 <input type="text" style="width: 180px" type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div><br>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10" style="float:right">
+              <div class="form-group" style="float:right">
+                <div class="col-sm-offset-2 col-sm-10">
                   <button type="button" value="Login" onclick="formhash(this.form, this.form.password);" class="btn btn-default">Entrar</button>
                 </div>
               </div>
