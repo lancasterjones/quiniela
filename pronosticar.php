@@ -82,8 +82,8 @@ sec_session_start();
           <thead><tr>
           <?php
           $row = $result->fetch_array(MYSQLI_ASSOC);
-          printf("<th><img src='%s'></th><th><img src='%s'></th>",$row['logo_local'], $row['logo_visitante'])
-           ?> 
+          printf("%s - %s",$row['logo_local'], $row['logo_visitante'])
+           ?>
           </tr></thead>
           <tbody>
               <?php
