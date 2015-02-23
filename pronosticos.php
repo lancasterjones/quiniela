@@ -62,8 +62,6 @@ sec_session_start();
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
     <?php if (login_check($mysqli) == true) : ?>
-
-
               <?php
               $i = 0;
               $sql = "SELECT partidos.id,
@@ -102,8 +100,7 @@ float: right;'> ".
                   " - " .
                   $row['goles_visitante'] .
                   "</strong></div>
-                  <div class='panel-body'>
-                  </div>
+                  
                   <table class='table'>
                     <thead><tr>
                       <th>Nombre</th>
@@ -163,7 +160,7 @@ ORDER BY puntos DESC";
                 ?>
               <?php else : ?>
                   <p>
-                    <?php include 'includes/mensaje_no_autorizado.php'; ?>  
+                    <?php include 'includes/mensaje_no_autorizado.php'; ?>
                   </p>
               <?php endif; ?>
       </div>
