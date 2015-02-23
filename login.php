@@ -82,12 +82,9 @@ if (login_check($mysqli) == true) {
                 <span class="input-group-addon" id="basic-addon1">@</span>
                 <input type="text" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
               </div>
-
-
-          
-                Password: <input type="password"
-                                 name="password"
-                                 id="password"/>
+              <div class="input-group">
+                <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
                 <input type="button"
                        value="Login"
                        onclick="formhash(this.form, this.form.password);" />
