@@ -43,11 +43,11 @@ sec_session_start();
             '$goles_local',
             '$goles_visitante'
           )
-          ON DUPLICATE KEY UPDATE (
+          ON DUPLICATE KEY UPDATE
             goles_local = '$goles_local',
             goles_visitante = '$goles_visitante'
-          )";
-          
+          ";
+
 if ($conn->query($sql) === TRUE) {
   echo "Resultado Guardado";
 } else {
