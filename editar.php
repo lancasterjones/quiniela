@@ -50,6 +50,7 @@ sec_session_start();
 
 if ($conn->query($sql) === TRUE) {
   echo "Resultado Guardado";
+  header("Location: ../partidos.php");
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
