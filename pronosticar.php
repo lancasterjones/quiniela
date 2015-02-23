@@ -84,7 +84,8 @@ sec_session_start();
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) > 0) {
-                echo "<td>Con Resultados<td>"
+                echo "<td>Con Resultados<td>";
+                echo "<td>". mysqli_num_rows($result) . "</td>";
 
                   /*while($row = mysqli_fetch_array($result))
                   {
