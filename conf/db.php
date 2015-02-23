@@ -4,6 +4,11 @@ $username = "admin_shampions";
 $password = "AlrorO";
 $db = "admin_shampions";
 
+define("CAN_REGISTER", "any");
+define("DEFAULT_ROLE", "member");
+
+define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
+
 // Conectar
 $conn = new mysqli($servername, $username, $password, $db) or die("Some error occurred during connection " . mysqli_error($conn));
 // Check connection

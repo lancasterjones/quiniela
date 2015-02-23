@@ -82,7 +82,7 @@
 
                 echo "<tr><td>";
                 if( $i == 1){ echo "<i style='color: #C0C0C0' class='fa fa-trophy fa-2x'></i> ";};
-                echo  $row['nombre'] .
+                echo  $row['username'] .
                       "</td><td>". $row['resultados'] . "</td>" .
                       "<td>". $row['marcadores'] . "</td>" .
                       "<td>". $row['pts_totales'] . " </td></tr>" ;
