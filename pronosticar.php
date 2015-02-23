@@ -66,23 +66,28 @@ sec_session_start();
 
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
-      <?php if (login_check($mysqli) == true) : ?>
+      <?php if (login_check($mysqli) == true) :
+        $accion = "Cambiar";
+        $id_partido =  ($_GET['p']/112);
+        $id_usuario = htmlentities($_SESSION['user_id']);
+        $sql = "SELECT *
+                FROM pronosticos_prueba
+                WHERE id_partido = '$id_partido'
+                AND id_usuario =  '$id_usuario'  ";
+        $result = mysqli_query($conn, $sql);
+        $sql_info = "SELECT * FROM view_partidos WHERE id_partido = '$id_partido'  "
+        ?>
         <h3>Pronóstico Actual</h3>
         <table class='table'>
           <thead><tr>
-            <th>Local</th>
-            <th>Visitante</th>
+          <?php
+          $row = $result->fetch_array(MYSQLI_ASSOC);
+          printf("<th><img src='%s'></th><th><img src='%s'></th>",$row['logo_local'], $row['logo_visitante'])
+           ?> 
           </tr></thead>
           <tbody>
               <?php
-              $accion = "Cambiar";
-              $id_partido =  ($_GET['p']/112);
-              $id_usuario = htmlentities($_SESSION['user_id']);
-              $sql = "SELECT *
-                      FROM pronosticos_prueba
-                      WHERE id_partido = '$id_partido'
-                      AND id_usuario =  '$id_usuario'  ";
-              $result = mysqli_query($conn, $sql);
+
 
               if (mysqli_num_rows($result) > 0) {
                 $row = $result->fetch_array(MYSQLI_ASSOC);
