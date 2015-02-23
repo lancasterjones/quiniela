@@ -79,6 +79,9 @@ sec_session_start();
         $result_info = mysqli_query($conn, $sql_info);
         ?>
         <h3>Pronóstico Actual</h3>
+        <div class='panel panel-primary' style='max-width: 600px; margin: 0 auto;'>
+        <div class='panel-heading'>
+        </div>
         <table class='table'>
           <thead><tr>
           <?php
@@ -125,6 +128,7 @@ sec_session_start();
         </table>
             <input type="submit" value="<?php echo $accion ?>">
         </form>
+      </div>
 
 
 
