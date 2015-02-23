@@ -75,7 +75,7 @@ sec_session_start();
                 WHERE id_partido = '$id_partido'
                 AND id_usuario =  '$id_usuario'  ";
         $result = mysqli_query($conn, $sql);
-        $sql_info = "SELECT * FROM view_partidos WHERE id_partido = '$id_partido'  "
+        $sql_info = "SELECT * FROM view_partidos WHERE id_partido = '$id_partido' ";
         $result_info = mysqli_query($conn, $sql_info);
         ?>
         <h3>Pronóstico Actual</h3>
