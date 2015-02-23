@@ -70,8 +70,8 @@ if (login_check($mysqli) == true) {
           <div class="container" style="max-width: 300px; width:100%;">
             <div class="starter-template">
               <?php if (login_check($mysqli) == true) : ?>
-
-        <p>Ya estás logeado <?php echo $logged ?>.</p>
+        <br><br><br><br>
+        <p>Ya estás loggeado <?php echo $logged ?>.</p>
 
       <?php else : ?>
 
