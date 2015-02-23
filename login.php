@@ -79,11 +79,11 @@ if (login_check($mysqli) == true) {
             ?>
             <form action="includes/process_login.php" method="post" name="login_form">
               <div class="input-group">
-                <span style="width:188px" class="input-group-addon" id="basic-addon1">@</span>
+                <span style="width:88px" class="input-group-addon" id="basic-addon1">@</span>
                 <input type="text" style="width: 180px" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
               </div>
               <div class="input-group">
-                <span style="width:188px" class="input-group-addon" id="basic-addon1">Password</span>
+                <span style="width:88px" class="input-group-addon" id="basic-addon1">Password</span>
                 <input type="text" style="width: 180px" type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
               <div class="form-group">
