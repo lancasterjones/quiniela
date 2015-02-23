@@ -1,4 +1,26 @@
-<?php include 'conf/db.php'; ?> <!-- Menú Global -->
+<?php
+/**
+ * Copyright (C) 2013 peredur.net
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+include 'conf/db.php'; ?> <!-- Menú Global -->
+
+sec_session_start();
+?>
 
 <head>
     <meta charset="utf-8">
@@ -31,6 +53,7 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
+<?php if (login_check($mysqli) == true) : ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -101,4 +124,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <?php else : ?>
+      <p>
+          <span class="error">No estás autorizado para ver esta página.</span> Por favor <a href="index.php">ingresa a tu cuenta</a>.
+      </p>
+  <?php endif; ?>
   </body>
