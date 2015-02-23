@@ -21,9 +21,9 @@ sec_session_start();
 
 
  $id_usuario = htmlentities($_SESSION['user_id']);
- $id_partido = $_GET['partido'];;
- $goles_local = $_GET['local'];;
- $goles_visitante = $_GET['visitante'];;
+ $id_partido = $_GET['partido'];
+ $goles_local = mysqli_real_escape_string($link, $_POST['goles_local']);
+ $goles_visitante = mysqli_real_escape_string($link, $_POST['goles_visitante']);
 
  echo 'Usuario: ' . $id_usuario . '<br>' .
       'Partido: ' . $id_partido . '<br>' .
@@ -53,5 +53,3 @@ if ($conn->query($sql) === TRUE) {
       <?php include 'includes/mensaje_no_autorizado.php'; ?>
     </p>
 <?php endif; ?>
-
-?>
