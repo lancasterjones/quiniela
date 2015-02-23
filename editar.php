@@ -12,6 +12,7 @@ sec_session_start();
  <title>Editar Pronóstico</title>
  </head>
  <body>
+   <?php if (login_check($mysqli) == true) : ?>
    <p>Hola <?php echo htmlentities($_SESSION['username']); ?>!</p>
 
  <?php
@@ -47,5 +48,10 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
+ else : ?>
+    <p>
+      <?php include 'includes/mensaje_no_autorizado.php'; ?>
+    </p>
+<?php endif; ?>
 
 ?>
