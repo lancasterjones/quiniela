@@ -117,7 +117,12 @@ sec_session_start();
         </table>
       <?php else : ?>
           <p>
-              <span class="error">No estás autorizado para ver esta página.</span> Por favor <a href="index.php">ingresa a tu cuenta</a>.
+            <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            No estás autorizado para ver esta página.<br>
+            Por favor <a href="index.php">ingresa a tu cuenta</a>
+            </div>
           </p>
       <?php endif; ?>
       </div>
