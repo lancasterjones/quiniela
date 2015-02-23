@@ -83,7 +83,7 @@ sec_session_start();
        INNER JOIN admin_shampions.equipos equipos
           ON (partidos.local = equipos.id)
  WHERE (partidos.fecha BETWEEN DATE_SUB(partidos.fecha, INTERVAL 1 HOUR) AND DATE_ADD(NOW(), INTERVAL 1 HOUR))
-ORDER BY partidos.id ASC";
+ORDER BY partidos.id DESC";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
