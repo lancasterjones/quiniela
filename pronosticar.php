@@ -87,7 +87,7 @@ sec_session_start();
                 echo "<td>Con Resultados<td>";
                 echo "<td>". mysqli_num_rows($result) . "</td>";
                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                printf ("%s (%s)\n", $row["goles_local"], $row["goles_visitante"]);
+                printf ("<td>%s</td><td>%s</td>", $row["goles_local"], $row["goles_visitante"]);
 
                   /*while($row = mysqli_fetch_array($result))
                   {
