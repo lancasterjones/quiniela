@@ -18,9 +18,9 @@ sec_session_start();
  include 'conf/db.php';
 
  $id_usuario = 1;
- $id_partido = 1;
- $goles_local = 3;
- $goles_visitante = 2;
+ $id_partido = $_GET['partido'];;
+ $goles_local = $_GET['local'];;
+ $goles_visitante = $_GET['visitante'];;
 
  echo 'Usuario: ' . $id_usuario . '<br>' .
       'Partido: ' . $id_partido . '<br>' .
