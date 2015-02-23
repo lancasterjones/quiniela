@@ -167,6 +167,7 @@ sec_session_start();
         </table>
       </div>
     <?php else : ?>
+      <br><br>
         <p>
           <div class="alert alert-danger" role="alert" style="text-align:center">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
