@@ -76,7 +76,7 @@ sec_session_start();
           </tr></thead>
           <tbody>
               <?php
-              $id_usuario = htmlentities($_SESSION['user_id']);
+              /* $id_usuario = htmlentities($_SESSION['user_id']);
               $sql = "SELECT *
                       FROM pronosticos_prueba
                       WHERE id_partido = '$id_partido' AND
@@ -91,7 +91,7 @@ sec_session_start();
                 echo "<br>Sin Resultados";
               };
                 //$conn->close(); // Cerrar DB
-                ?>
+                */ ?>
           </tbody>
         </table>
 
