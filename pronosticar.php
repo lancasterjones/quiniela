@@ -68,6 +68,34 @@ sec_session_start();
     <div class="starter-template">
       <?php if (login_check($mysqli) == true) : ?>
         <?php $id_partido =  $_GET['p']; ?>
+        <h3>Pronóstico Actual</h3>
+        <table class='table'>
+          <thead><tr>
+            <th>Local</th>
+            <th>Visitante</th>
+          </tr></thead>
+          <tbody>
+              <?php
+              $id_usuario = htmlentities($_SESSION['user_id']);
+              $sql = "SELECT *
+                      FROM pronosticos_prueba
+                      WHERE id_partido = '$id_partido' AND
+                      id_usuario =  '$id_usuario' ";
+              $result = mysqli_query($conn, $sql);
+              if (mysqli_num_rows($result) > 0) {
+          while($row = mysqli_fetch_array($result))
+            {
+                echo  "<tr><td> . $row['goles_local'] . </td>" .
+                      "<td> . $row['goles_visitante'] . </td></tr>" ;
+              } ; } else {
+                echo "<br>Sin Resultados";
+              };
+                //$conn->close(); // Cerrar DB
+                ?>
+          </tbody>
+        </table>
+
+
         <form action="editar.php" method="post">
           <p>
               <input type="hidden" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
