@@ -84,17 +84,16 @@ sec_session_start();
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) == 0) {
-                echo "<br>Sin Resultados";  } ;
-                else {
+                echo "<br>Sin Resultados";
+                } else {
                     while($row = mysqli_fetch_array($result))
                     {
-                echo  "<tr><td> . $row['goles_local'] . </td>" .
-                      "<td> . $row['goles_visitante'] . </td></tr>" ;
+                echo  "<tr><td> . $row['goles_local'] . </td></tr>" ;
 
 
-              };};
+              }};
                 //$conn->close(); // Cerrar DB
-                */ ?>
+                ?>
           </tbody>
         </table>
 
