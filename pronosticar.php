@@ -81,7 +81,7 @@ sec_session_start();
               $sql = "SELECT *
                       FROM pronosticos_prueba
                       WHERE id_partido = '$id_partido'
-                      /* AND id_usuario =  '$id_usuario' */ ";
+                      AND id_usuario =  '$id_usuario'  ";
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) > 0) {
