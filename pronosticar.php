@@ -102,7 +102,7 @@ sec_session_start();
 
               if (mysqli_num_rows($result) > 0) {
                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                printf ("<tr><td style='btn btn-info'>%s</td><td>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
+                printf ("<tr><td class='btn btn-info' style='width: 20px'>%s</td><td class='btn btn-info' style='width: 20px'>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
 
                   /*while($row = mysqli_fetch_array($result))
                   {
@@ -133,6 +133,7 @@ sec_session_start();
         </table>
             <input type="submit" value="<?php echo $accion ?>" class="btn btn-success">
         </form>
+        <br>
       </div>
 
 
