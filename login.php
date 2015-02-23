@@ -78,7 +78,13 @@ if (login_check($mysqli) == true) {
             }
             ?>
             <form action="includes/process_login.php" method="post" name="login_form">
-                Email: <input type="text" name="email" />
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+              </div>
+
+
+          
                 Password: <input type="password"
                                  name="password"
                                  id="password"/>

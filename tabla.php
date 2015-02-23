@@ -123,7 +123,7 @@ sec_session_start();
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span class="sr-only">Error:</span>
           No estás autorizado para ver esta página.<br>
-          Por favor <a href="index.php">ingresa a tu cuenta</a>
+          Por favor <a href="login.php">ingresa a tu cuenta</a>
           </div>
         </p>
     <?php endif; ?>
