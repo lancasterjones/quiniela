@@ -20,7 +20,7 @@ sec_session_start();
 // connect to the database
 
 
- $id_usuario = echo htmlentities($_SESSION['user_id']);
+ $id_usuario = htmlentities($_SESSION['user_id']);
  $id_partido = $_GET['partido'];;
  $goles_local = $_GET['local'];;
  $goles_visitante = $_GET['visitante'];;
