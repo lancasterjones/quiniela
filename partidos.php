@@ -51,7 +51,7 @@ sec_session_start();
             <li><a href="/pronosticos.php">Pronósticos</a></li>
             <li><a href="/tabla.php">Tabla</a></li>
             <li style:"float:right;"><?php if (login_check($mysqli) == true) {
-                echo "<a href='includes/logout.php' >Salir</a>"
+                echo "<a href='includes/logout.php' >Salir</a>";
             } ?>
             </li>
           </ul>
