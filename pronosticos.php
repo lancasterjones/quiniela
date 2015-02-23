@@ -1,4 +1,10 @@
-<?php include 'conf/db.php'; ?> <!-- Menú Global -->
+<?php
+include 'conf/db.php';
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+
+sec_session_start();
+?>
 
 <head>
     <meta charset="utf-8">
@@ -55,7 +61,7 @@
 
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
-
+    <?php if (login_check($mysqli) == true) : ?>
 
 
               <?php
@@ -155,9 +161,17 @@ ORDER BY puntos DESC";
               };
                 //$conn->close(); // Cerrar DB
                 ?>
-
+              <?php else : ?>
+                  <p>
+                    <div class="alert alert-danger" role="alert" style="text-align:center">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    No estás autorizado para ver esta página.<br>
+                    Por favor <a href="login.php">ingresa a tu cuenta</a>
+                    </div>
+                  </p>
+              <?php endif; ?>
       </div>
-
     </div>
 
     <!-- Bootstrap core JavaScript
