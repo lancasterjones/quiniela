@@ -76,13 +76,14 @@ sec_session_start();
                 AND id_usuario =  '$id_usuario'  ";
         $result = mysqli_query($conn, $sql);
         $sql_info = "SELECT * FROM view_partidos WHERE id_partido = '$id_partido'  "
+        $result_info = mysqli_query($conn, $sql_info);
         ?>
         <h3>Pronóstico Actual</h3>
         <table class='table'>
           <thead><tr>
           <?php
-          $row = $result->fetch_array(MYSQLI_ASSOC);
-          printf("%s - %s",$row['logo_local'], $row['logo_visitante'])
+          $rows = $result_info->fetch_array(MYSQLI_ASSOC);
+          printf("%s - %s",$rows['logo_local'], $rows['logo_visitante'])
            ?>
           </tr></thead>
           <tbody>
