@@ -102,7 +102,7 @@ sec_session_start();
 
               if (mysqli_num_rows($result) > 0) {
                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                printf ("<tr><td>%s</td><td>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
+                printf ("<tr><td style='btn btn-info'>%s</td><td>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
 
                   /*while($row = mysqli_fetch_array($result))
                   {
@@ -123,6 +123,7 @@ sec_session_start();
               <input type="hidden" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
 
               <input type="text" name="goles_local" id="goles_local">
+
             </td>
             <td>
 
