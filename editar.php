@@ -27,8 +27,8 @@ sec_session_start();
           VALUES (
             1,
             1,
-            5,
-            5
+            4,
+            4
           ) ";
 if ($conn->query($sql) === TRUE) {
   echo "Resultado Guardado";
