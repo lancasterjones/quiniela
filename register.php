@@ -1,6 +1,6 @@
 <?php
-include_once 'conf/register.inc.php';
-include_once 'conf/functions.php';
+include_once 'includes/register.inc.php';
+include_once 'includes/functions.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +22,7 @@ include_once 'conf/functions.php';
         ?>
         <ul>
             <li>Usernames may contain only digits, upper and lower case letters and underscores</li>
-            <!--li>Emails must have a valid email format</li-->
+            <li>Emails must have a valid email format</li>
             <li>Passwords must be at least 6 characters long</li>
             <li>Passwords must contain
                 <ul>
@@ -39,7 +39,7 @@ include_once 'conf/functions.php';
             Username: <input type='text'
                 name='username'
                 id='username' /><br>
-          <!--  Email: <input type="text" name="email" id="email" /><br> -->
+            Email: <input type="text" name="email" id="email" /><br>
             Password: <input type="password"
                              name="password"
                              id="password"/><br>
@@ -50,10 +50,10 @@ include_once 'conf/functions.php';
                    value="Register"
                    onclick="return regformhash(this.form,
                                    this.form.username,
-
+                                   this.form.email,
                                    this.form.password,
                                    this.form.confirmpwd);" />
         </form>
-        <p>Ir a la <a href="tabla.php">Tabla</a>.</p>
+        <p>Return to the <a href="index.php">login page</a>.</p>
     </body>
 </html>
