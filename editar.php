@@ -12,10 +12,12 @@ sec_session_start();
  <title>Editar Pronóstico</title>
  </head>
  <body>
+   <p>Hola <?php echo htmlentities($_SESSION['username']); ?>!</p>
+
  <?php
 
 // connect to the database
- include 'conf/db.php';
+
 
  $id_usuario = 1;
  $id_partido = $_GET['partido'];;
