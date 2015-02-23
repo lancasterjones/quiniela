@@ -76,7 +76,7 @@ sec_session_start();
           <tbody>
               <?php
               $accion = "Cambiar";
-              $id_partido =  ($_GET['p']/2);
+              $id_partido =  ($_GET['p']/112);
               $id_usuario = htmlentities($_SESSION['user_id']);
               /* $id_usuario = htmlentities($_SESSION['user_id']) */;
               $sql = "SELECT *
