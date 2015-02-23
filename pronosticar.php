@@ -83,7 +83,10 @@ sec_session_start();
           <thead><tr>
           <?php
           $rows = $result_info->fetch_array(MYSQLI_ASSOC);
-          printf("<img src='%s'><img src='%s'",$rows['logo_local'], $rows['logo_visitante'])
+          printf("<th><img src='%s'></th>
+                  <th><img src='%s'></th>",
+                  $rows['logo_local'],
+                  $rows['logo_visitante'])
            ?>
           </tr></thead>
           <tbody>
