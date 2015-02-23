@@ -21,7 +21,7 @@ sec_session_start();
 
 
  $id_usuario = htmlentities($_SESSION['user_id']);
- $id_partido = $_GET['partido'];
+ $id_partido = $_POST['partido'];
  $goles_local = $_POST['goles_local'];
  $goles_visitante = $_POST['goles_visitante'];
 
