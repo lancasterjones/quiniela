@@ -91,7 +91,7 @@ sec_session_start();
                 echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
                       "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
                       "<td style='text-align: center;'>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
-                      "<td style='text-align: center;'><a href='/pronosticar.php?p="<?php echo $row['id_partido'] ?>"'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
+                      "<td style='text-align: center;'><a href='/pronosticar.php?p=". $row['id_partido'] . "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
               } ; } else {
                 echo "<br>Sin Resultados";
               };
