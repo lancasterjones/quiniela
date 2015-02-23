@@ -29,6 +29,9 @@ sec_session_start();
   .panel-heading img {
     width: 35px;
   }
+  .badge {
+    fonst-size: 18px;
+  }
 </style>
 
 <!-- Latest compiled and minified CSS -->
@@ -82,7 +85,7 @@ sec_session_start();
         $result_info = mysqli_query($conn, $sql_info);
         ?>
         <h3>Pronóstico Actual</h3>
-        <div class='panel panel-primary' style='max-width: 600px; margin: 0 auto;'>
+        <div class='panel panel-primary' style='max-width: 400px; margin: 0 auto;'>
         <div class='panel-heading'>
           <?php
           $rows = $result_info->fetch_array(MYSQLI_ASSOC);
@@ -100,7 +103,7 @@ sec_session_start();
               if (mysqli_num_rows($result) > 0) {
                 $row = $result->fetch_array(MYSQLI_ASSOC);
                 printf ("<tr><td><span class='badge'>%s</span></td><td><span class='badge'>%s</span></td></tr>", $row["goles_local"], $row["goles_visitante"]);
-                
+
                   /*while($row = mysqli_fetch_array($result))
                   {
               echo  "<tr><td> . $row['goles_local'] . </td></tr>" ;
