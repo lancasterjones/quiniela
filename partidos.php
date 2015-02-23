@@ -83,16 +83,16 @@ sec_session_start();
           </tr></thead>
           <tbody>
               <?php
-              $sql = "SELECT * FROM view_partidos WHERE ronda = 'Octavos' ";
+              $sql = "SELECT * FROM view_partidos WHERE ronda = 'Octavos' AND WHERE (partidos.fecha BETWEEN DATE_ADD(NOW(), INTERVAL 1 HOUR) AND DATE_SUB(partidos.fecha, INTERVAL 1 HOUR))";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
-            {   if (date('M j g:i A', strtotime($row['fecha'])) > date('M j g:i A', strtotime(date())) ){
+            {
                 echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
                       "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
                       "<td style='text-align: center;'>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
                       "<td style='text-align: center;'><a href='/pronosticar.php?p=". ($row['id_partido']*112) . "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
-              } ; } ; }else {
+              } ; } else {
                 echo "<br>Sin Resultados";
               };
                 //$conn->close(); // Cerrar DB
