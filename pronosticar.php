@@ -67,7 +67,7 @@ sec_session_start();
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
       <?php if (login_check($mysqli) == true) : ?>
-        <?php $id_partido =  $_GET['partido']; ?>
+        <?php $id_partido =  $_GET['p']; ?>
         <form action="editar.php" method="post">
           <p>
               <label for="partido">Partido:</label>
