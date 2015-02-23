@@ -1,4 +1,20 @@
 <?php
+/**
+ * Copyright (C) 2013 peredur.net
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
 ?>
@@ -26,19 +42,15 @@ include_once 'includes/functions.php';
             <li>Passwords must be at least 6 characters long</li>
             <li>Passwords must contain
                 <ul>
-                    <li>At least one uppercase letter (A..Z)</li>
+                    <li>At least one upper case letter (A..Z)</li>
                     <li>At least one lower case letter (a..z)</li>
                     <li>At least one number (0..9)</li>
                 </ul>
             </li>
             <li>Your password and confirmation must match exactly</li>
         </ul>
-        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>"
-                method="post"
-                name="registration_form">
-            Username: <input type='text'
-                name='username'
-                id='username' /><br>
+        <form method="post" name="registration_form" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
+            Username: <input type='text' name='username' id='username' /><br>
             Email: <input type="text" name="email" id="email" /><br>
             Password: <input type="password"
                              name="password"

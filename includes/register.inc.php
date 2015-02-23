@@ -1,4 +1,22 @@
 <?php
+
+/*
+ * Copyright (C) 2013 peter
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 include_once 'db_connect.php';
 include_once 'psl-config.php';
 
@@ -29,7 +47,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
 
-   // check existing email
     if ($stmt) {
         $stmt->bind_param('s', $email);
         $stmt->execute();
@@ -38,33 +55,10 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
         if ($stmt->num_rows == 1) {
             // A user with this email address already exists
             $error_msg .= '<p class="error">A user with this email address already exists.</p>';
-                        $stmt->close();
         }
-                $stmt->close();
     } else {
-        $error_msg .= '<p class="error">Database error Line 39</p>';
-                $stmt->close();
+        $error_msg .= '<p class="error">Database error</p>';
     }
-
-    // check existing username
-    $prep_stmt = "SELECT id FROM members WHERE username = ? LIMIT 1";
-    $stmt = $mysqli->prepare($prep_stmt);
-
-    if ($stmt) {
-        $stmt->bind_param('s', $username);
-        $stmt->execute();
-        $stmt->store_result();
-
-                if ($stmt->num_rows == 1) {
-                        // A user with this username already exists
-                        $error_msg .= '<p class="error">A user with this username already exists</p>';
-                        $stmt->close();
-                }
-                $stmt->close();
-        } else {
-                $error_msg .= '<p class="error">Database error line 55</p>';
-                $stmt->close();
-        }
 
     // TODO:
     // We'll also have to account for the situation where the user doesn't have
@@ -73,8 +67,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
 
     if (empty($error_msg)) {
         // Create a random salt
-        //$random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE)); // Did not work
-        $random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
+        $random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE));
 
         // Create salted password
         $password = hash('sha512', $password . $random_salt);
@@ -85,8 +78,10 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
+                exit();
             }
         }
         header('Location: ./register_success.php');
+        exit();
     }
 }
