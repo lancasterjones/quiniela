@@ -76,11 +76,12 @@ sec_session_start();
           </tr></thead>
           <tbody>
               <?php
-              /* $id_usuario = htmlentities($_SESSION['user_id']);
+              $id_usuario = htmlentities($_SESSION['user_id']);
               $sql = "SELECT *
                       FROM pronosticos_prueba
                       WHERE id_partido = '$id_partido' AND
                       id_usuario =  '$id_usuario' ";
+                      /*
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
