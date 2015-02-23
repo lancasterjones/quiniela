@@ -67,7 +67,6 @@ sec_session_start();
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
       <?php if (login_check($mysqli) == true) : ?>
-        <?php $id_partido =  $_GET['p']; ?>
         <h3>Pronóstico Actual</h3>
         <table class='table'>
           <thead><tr>
@@ -77,6 +76,8 @@ sec_session_start();
           <tbody>
               <?php
               $accion = "Cambiar";
+              $id_partido =  $_GET['p'];
+              $id_usuario = htmlentities($_SESSION['user_id']);
               /* $id_usuario = htmlentities($_SESSION['user_id']) */;
               $sql = "SELECT *
                       FROM pronosticos_prueba
