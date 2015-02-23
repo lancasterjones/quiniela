@@ -41,7 +41,7 @@
 
 
  // connect to the database
- include('conf/db.php');
+ include 'conf/db.php';
 
  // check if the form has been submitted. If it has, process the form and save it to the database
  if (isset($_POST['submit']))
@@ -66,7 +66,7 @@
  else
  {
  // save the data to the database
- mysql_query("UPDATE players SET firstname='$firstname', lastname='$lastname' WHERE id='$id'")
+ mysql_query("UPDATE pronosticos SET firstname='$firstname', lastname='$lastname' WHERE id='$id'")
  or die(mysql_error());
 
  // once saved, redirect back to the view page
@@ -88,7 +88,7 @@
  {
  // query db
  $id = $_GET['id'];
- $result = mysql_query("SELECT * FROM players WHERE id=$id")
+ $result = mysql_query("SELECT * FROM pronosticos WHERE id=$id")
  or die(mysql_error());
  $row = mysql_fetch_array($result);
 
