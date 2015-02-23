@@ -17,7 +17,7 @@
  */
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-include 'conf/db.php'; ?> <!-- Menú Global -->
+include 'conf/db.php';
 
 sec_session_start();
 ?>
