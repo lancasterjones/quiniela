@@ -65,7 +65,7 @@ sec_session_start();
     </nav><br><br><br><br>
 
   <div class="container" style="max-width: 700px;">
-    <div class="starter-template">
+    <div class="starter-template" style="text-align: center;">
       <?php if (login_check($mysqli) == true) :
         $accion = "Cambiar";
         $id_partido =  ($_GET['p']/112);
