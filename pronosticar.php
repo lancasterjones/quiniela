@@ -84,7 +84,9 @@ sec_session_start();
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) > 0) {
-                echo "<br>Con Resultados";
+                echo "<td>Con Resultados<td>"
+                echo "<td>". mysqli_num_rows($result) . "</td>";
+
                   /*while($row = mysqli_fetch_array($result))
                   {
               echo  "<tr><td> . $row['goles_local'] . </td></tr>" ;
