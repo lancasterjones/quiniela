@@ -70,8 +70,7 @@ sec_session_start();
         <?php $id_partido =  $_GET['p']; ?>
         <form action="editar.php" method="post">
           <p>
-              <label for="partido">Partido:</label>
-              <input type="text" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
+              <input type="hidden" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
           </p>
             <p>
                 <label for="local">Goles de Local:</label>
