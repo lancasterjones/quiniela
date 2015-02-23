@@ -1,4 +1,10 @@
-<?php include 'conf/db.php'; ?> <!-- Menú Global -->
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+include 'conf/db.php';
+
+sec_session_start();
+?>
 
 <head>
     <meta charset="utf-8">
@@ -51,6 +57,7 @@
 
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
+      <?php if (login_check($mysqli) == true) : ?>
         <h1>Partidos Siguientes</h1>
 
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
@@ -159,6 +166,16 @@
           </tbody>
         </table>
       </div>
+    <?php else : ?>
+        <p>
+          <div class="alert alert-danger" role="alert" style="text-align:center">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          No estás autorizado para ver esta página.<br>
+          Por favor <a href="login.php">ingresa a tu cuenta</a>
+          </div>
+        </p>
+    <?php endif; ?>
     </div>
   </div>
     <!-- Bootstrap core JavaScript
