@@ -83,7 +83,9 @@ sec_session_start();
           </tr></thead>
           <tbody>
               <?php
-              $sql = "SELECT * FROM view_partidos WHERE ronda = 'Octavos' AND WHERE (partidos.fecha BETWEEN DATE_ADD(NOW(), INTERVAL 1 HOUR) AND DATE_SUB(partidos.fecha, INTERVAL 1 HOUR))";
+              $sql = "SELECT * FROM view_partidos
+WHERE ronda = 'Octavos'
+AND (view_partidos.fecha BETWEEN DATE_ADD(NOW(), INTERVAL 1 HOUR) AND DATE_ADD(view_partidos.fecha, INTERVAL 0 HOUR))";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_array($result))
