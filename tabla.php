@@ -59,9 +59,7 @@
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Tabla General</div>
-        <div class="panel-body">
-        </div>
-
+        <div class="panel-body"></div>
         <!-- Table -->
         <table class='table'>
           <thead><tr>
