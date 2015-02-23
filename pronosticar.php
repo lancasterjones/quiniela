@@ -99,8 +99,8 @@ sec_session_start();
 
               if (mysqli_num_rows($result) > 0) {
                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                printf ("<tr><td class='btn btn-info' style='width: 20px'>%s</td><td class='btn btn-info' style='width: 20px'>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
-
+                printf ("<tr><td><span class='badge'>%s</span></td><td><span class='badge'>%s</span></td></tr>", $row["goles_local"], $row["goles_visitante"]);
+                <span class="badge">42</span>
                   /*while($row = mysqli_fetch_array($result))
                   {
               echo  "<tr><td> . $row['goles_local'] . </td></tr>" ;
