@@ -169,7 +169,7 @@ sec_session_start();
     <?php else : ?>
       <br><br>
         <p>
-        <?php include 'includes/mensaje_no_autorizado.php';  
+        <?php include 'includes/mensaje_no_autorizado.php'; ?>  
         </p>
     <?php endif; ?>
     </div>
