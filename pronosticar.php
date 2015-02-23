@@ -83,12 +83,10 @@ sec_session_start();
           <thead><tr>
           <?php
           $rows = $result_info->fetch_array(MYSQLI_ASSOC);
-          printf("<th><img src='%s'>%s</th>
-                  <th><img src='%s'>%s</th>",
+          printf("<th><img src='%s'></th>
+                  <th><img src='%s'></th>",
                   $rows['logo_local'],
-                  $rows['local'],
                   $rows['logo_visitante']),
-                  $rows['visitante']
            ?>
           </tr></thead>
           <tbody>
