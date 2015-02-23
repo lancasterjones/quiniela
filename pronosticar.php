@@ -26,6 +26,9 @@ sec_session_start();
   tr {
     text-align: center;
   }
+  .panel-heading img {
+    width: 35px;
+  }
 </style>
 
 <!-- Latest compiled and minified CSS -->
@@ -81,16 +84,17 @@ sec_session_start();
         <h3>Pronóstico Actual</h3>
         <div class='panel panel-primary' style='max-width: 600px; margin: 0 auto;'>
         <div class='panel-heading'>
-        </div>
-        <table class='table'>
-          <thead><tr>
           <?php
           $rows = $result_info->fetch_array(MYSQLI_ASSOC);
-          printf("<th><img src='%s'></th>
-                  <th><img src='%s'></th>",
+          printf("<img src='%s'> -
+                  <img src='%s'>",
                   $rows['logo_local'],
                   $rows['logo_visitante'])
            ?>
+        </div>
+        <table class='table'>
+          <thead><tr>
+
           </tr></thead>
           <tbody>
               <?php
