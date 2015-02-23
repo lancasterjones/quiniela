@@ -17,6 +17,16 @@ sec_session_start();
 // connect to the database
  include 'conf/db.php';
 
+ $id_usuario = 1;
+ $id_partido = 1;
+ $goles_local = 3;
+ $goles_visitante = 2;
+
+ echo 'Usuario: ' . $id_usuario . '<br>' .
+      'Partido: ' . $id_partido . '<br>' .
+      'Local: ' . $goles_local . '<br>' .
+      'Visitante' . $goles_visitante . '<br>';
+
  $sql = " INSERT INTO pronosticos_prueba
           (
             id_usuario,
@@ -25,10 +35,10 @@ sec_session_start();
             goles_visitante
             )
           VALUES (
-            1,
-            1,
-            4,
-            4
+            '$id_usuario',
+            '$id_partido',
+            '$goles_local',
+            '$goles_visitante'
           ) ";
 if ($conn->query($sql) === TRUE) {
   echo "Resultado Guardado";
