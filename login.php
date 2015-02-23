@@ -80,14 +80,16 @@ if (login_check($mysqli) == true) {
             <form action="includes/process_login.php" method="post" name="login_form">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">@</span>
-                <input type="text" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                <input type="text" style="width: 132px" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
               </div>
               <div class="input-group">
                 <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
-                <input type="button"
-                       value="Login"
-                       onclick="formhash(this.form, this.form.password);" />
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="button" value="Login" onclick="formhash(this.form, this.form.password);" class="btn btn-default">Sign in</button>
+                </div>
+              </div>
             </form>
 
           </p>
