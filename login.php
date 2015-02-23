@@ -62,7 +62,7 @@ if (login_check($mysqli) == true) {
                   <li><a href="/">Inicio</a></li>
                   <li><a href="/partidos.php">Partidos</a></li>
                   <li><a href="/pronosticos.php">Pronósticos</a></li>
-                  <li class="active"><a href="/tabla.php">Tabla</a></li>
+                  <li><a href="/tabla.php">Tabla</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
@@ -71,7 +71,8 @@ if (login_check($mysqli) == true) {
             <div class="starter-template">
               <?php if (login_check($mysqli) == true) : ?>
         <br><br><br><br>
-        <p>Ya estás loggeado <?php echo $logged ?>.</p>
+        <p>Ya estás loggeado.</p>
+        <p>Salir</p>
 
       <?php else : ?>
 
