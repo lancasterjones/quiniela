@@ -53,7 +53,7 @@ sec_session_start();
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-<?php if (login_check($mysqli) == true) : ?>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -84,6 +84,7 @@ sec_session_start();
         <div class="panel-heading">Tabla General</div>
         <div class="panel-body"></div>
         <!-- Table -->
+        <?php if (login_check($mysqli) == true) : ?>
         <table class='table'>
           <thead><tr>
             <th>Nombre</th>
@@ -114,6 +115,11 @@ sec_session_start();
                 ?>
           </tbody>
         </table>
+      <?php else : ?>
+          <p>
+              <span class="error">No estás autorizado para ver esta página.</span> Por favor <a href="index.php">ingresa a tu cuenta</a>.
+          </p>
+      <?php endif; ?>
       </div>
 
     </div>
@@ -124,9 +130,5 @@ sec_session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <?php else : ?>
-      <p>
-          <span class="error">No estás autorizado para ver esta página.</span> Por favor <a href="index.php">ingresa a tu cuenta</a>.
-      </p>
-  <?php endif; ?>
+
   </body>
