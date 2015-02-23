@@ -1,7 +1,5 @@
 <?php
 // http://www.wikihow.com/Create-a-Secure-Login-Script-in-PHP-and-MySQL
-
-
 include_once 'psl-config.php';
 
 function sec_session_start() {
@@ -26,13 +24,12 @@ function sec_session_start() {
     session_start();            // Start the PHP session
     session_regenerate_id(true);    // regenerated the session, delete the old one.
 }
-
 // Login
 function login($email, $password, $mysqli) {
     // Using prepared statements means that SQL injection is not possible.
     if ($stmt = $mysqli->prepare("SELECT id, username, password, salt
         FROM members
-       WHERE username = ?
+       WHERE email = ?
         LIMIT 1")) {
         $stmt->bind_param('s', $email);  // Bind "$email" to parameter.
         $stmt->execute();    // Execute the prepared query.
