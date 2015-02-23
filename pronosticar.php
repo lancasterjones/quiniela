@@ -133,7 +133,7 @@ sec_session_start();
         </table>
             <input type="submit" value="<?php echo $accion ?>" class="btn btn-success">
         </form>
-        <br>
+        <br><br><br>
       </div>
 
 
