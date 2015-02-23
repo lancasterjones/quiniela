@@ -83,6 +83,7 @@ if (login_check($mysqli) == true) {
                 <input type="text" style="width: 132px" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
               </div>
               <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Password</span>
                 <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
               <div class="form-group">
