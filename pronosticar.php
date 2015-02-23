@@ -30,7 +30,7 @@ sec_session_start();
     width: 35px;
   }
   .badge {
-    fonst-size: 18px;
+    font-size: 18px !important;
   }
 </style>
 
