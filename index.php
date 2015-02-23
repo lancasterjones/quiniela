@@ -35,7 +35,7 @@
 
 <body>
     <div class="container"><img src="/img/shampionsbg.jpg" alt="Shampions"/></div>
-    <h1>Pronto</h1>
+    <h1><a href="/login.php">Login</a></h1>
 </body>
 
 </html>
