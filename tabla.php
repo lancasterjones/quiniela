@@ -78,13 +78,14 @@ sec_session_start();
 
   <div class="container" style="max-width: 700px;">
     <div class="starter-template">
+      <?php if (login_check($mysqli) == true) : ?>
 
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Tabla General</div>
         <div class="panel-body"></div>
         <!-- Table -->
-        <?php if (login_check($mysqli) == true) : ?>
+
         <table class='table'>
           <thead><tr>
             <th>Nombre</th>
@@ -115,17 +116,17 @@ sec_session_start();
                 ?>
           </tbody>
         </table>
-      <?php else : ?>
-          <p>
-            <div class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span>
-            No estás autorizado para ver esta página.<br>
-            Por favor <a href="index.php">ingresa a tu cuenta</a>
-            </div>
-          </p>
-      <?php endif; ?>
       </div>
+    <?php else : ?>
+        <p>
+          <div class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          No estás autorizado para ver esta página.<br>
+          Por favor <a href="index.php">ingresa a tu cuenta</a>
+          </div>
+        </p>
+    <?php endif; ?>
 
     </div>
   </div>
