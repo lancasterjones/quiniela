@@ -87,6 +87,7 @@ sec_session_start();
                 echo "<br>Sin Resultados";
                 } else {
                   echo "<br>Con Resultados";
+                  var_dump($result);
                     /*while($row = mysqli_fetch_array($result))
                     {
                 echo  "<tr><td> . $row['goles_local'] . </td></tr>" ;
