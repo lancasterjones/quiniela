@@ -32,6 +32,9 @@ sec_session_start();
   .badge {
     font-size: 18px !important;
   }
+  .marcador {
+    max-width: 150px;
+  }
 </style>
 
 <!-- Latest compiled and minified CSS -->
@@ -122,12 +125,12 @@ sec_session_start();
           <tr><td>
               <input type="hidden" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
 
-              <input type="text" name="goles_local" id="goles_local">
+              <input type="text" name="goles_local" id="goles_local" class="marcador">
 
             </td>
             <td>
 
-              <input type="text" name="goles_visitante" id="goles_visitante">
+              <input type="text" name="goles_visitante" id="goles_visitante" class="marcador">
             </td>
           </tbody>
         </table>
