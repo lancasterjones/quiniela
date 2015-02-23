@@ -64,7 +64,7 @@ if (login_check($mysqli) == true) {
               </div><!--/.nav-collapse -->
             </div>
           </nav><br><br><br><br>
-          <div class="container" style="max-width: 700px;">
+          <div class="container" style="max-width: 300px; width:100%;">
             <div class="starter-template">
               <?php if (login_check($mysqli) == true) : ?>
 
@@ -85,10 +85,10 @@ if (login_check($mysqli) == true) {
               <div class="input-group">
                 <span style="width:88px" class="input-group-addon" id="basic-addon1">Password</span>
                 <input type="text" style="width: 180px" type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
+              </div><br>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="button" value="Login" onclick="formhash(this.form, this.form.password);" class="btn btn-default">Sign in</button>
+                <div class="col-sm-offset-2 col-sm-10" style="float:right">
+                  <button type="button" value="Login" onclick="formhash(this.form, this.form.password);" class="btn btn-default">Entrar</button>
                 </div>
               </div>
             </form>
