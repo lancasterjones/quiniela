@@ -84,8 +84,6 @@ sec_session_start();
               $result = mysqli_query($conn, $sql);
 
               if (mysqli_num_rows($result) > 0) {
-                echo "<tr><td>Con Resultados<td>";
-                echo "<td>". mysqli_num_rows($result) . "</td></tr>";
                 $row = $result->fetch_array(MYSQLI_ASSOC);
                 printf ("<tr><td>%s</td><td>%s</td></tr>", $row["goles_local"], $row["goles_visitante"]);
 
@@ -96,26 +94,25 @@ sec_session_start();
 
             }*/ }
                  else {
-                  echo "<br>Sin Resultados";
+                  /*echo "<br>Sin Resultados";*/
                 }
                 //$conn->close(); // Cerrar DB
                 ?>
-          </tbody>
-        </table>
+
 
 
         <form action="editar.php" method="post">
-          <p>
+          <tr><td>
               <input type="hidden" name="id_partido" id="id_partido" value="<?php echo $id_partido ?>">
-          </p>
-            <p>
-                <label for="local">Goles de Local:</label>
-                <input type="text" name="goles_local" id="goles_local">
-            </p>
-            <p>
+                <!--label for="local">Goles de Local:</label-->
+              <input type="text" name="goles_local" id="goles_local">
+            </td>
+            <td>
               <label for="local">Goles de Visitante:</label>
               <input type="text" name="goles_visitante" id="goles_visitante">
-            </p>
+            </td>
+          </tbody>
+        </table>
             <input type="submit" value="Agregar">
         </form>
 
