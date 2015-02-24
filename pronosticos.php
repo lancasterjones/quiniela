@@ -114,7 +114,7 @@ float: right;'> ".
                     </tr></thead>
                     <tbody>";
                     // DATOS AQUÍ
-                    $partido = $i;
+                    $partido = $row['id'];
                     $query_pronosticos = "SELECT DISTINCT
        pronosticos.id_partido,
        usuarios.nombre,

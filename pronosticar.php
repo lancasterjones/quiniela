@@ -80,7 +80,7 @@ sec_session_start();
         $id_partido =  ($_GET['p']/112);
         $id_usuario = htmlentities($_SESSION['user_id']);
         $sql = "SELECT *
-                FROM pronosticos_prueba
+                FROM pronosticos
                 WHERE id_partido = '$id_partido'
                 AND id_usuario =  '$id_usuario'  ";
         $result = mysqli_query($conn, $sql);
