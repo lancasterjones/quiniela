@@ -30,7 +30,7 @@ sec_session_start();
       'Local: ' . $goles_local . '<br>' .
       'Visitante' . $goles_visitante . '<br>';
 
- $sql = " INSERT INTO pronosticos_prueba
+ $sql = " INSERT INTO pronosticos
           (
             id_usuario,
             id_partido,
