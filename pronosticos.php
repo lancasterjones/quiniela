@@ -76,7 +76,7 @@ sec_session_start();
        partidos.goles_local,
        partidos.goles_visitante,
        DATE_SUB(partidos.fecha, INTERVAL 1 HOUR),
-       DATE_ADD(NOW(), INTERVAL 1 HOUR)
+       DATE_ADD(NOW(), INTERVAL -1 HOUR)
   FROM (admin_shampions.partidos partidos
         INNER JOIN admin_shampions.equipos equipos_1
            ON (partidos.visitante = equipos_1.id))
