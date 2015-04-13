@@ -50,7 +50,7 @@ if (login_check($mysqli) == true) {
           body{
             background: url(http://marcadeportiva.com.mx/wp-content/uploads/2015/02/champions-league-2013-2014.jpg);
             background-color: #444;
-            background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://marcadeportiva.com.mx/wp-content/uploads/2015/02/champions-league-2013-2014.jpg);    
+            background: url(/img/logoslogin.png),url(http://marcadeportiva.com.mx/wp-content/uploads/2015/02/champions-league-2013-2014.jpg);    
         }
 
           .vertical-offset-100{
