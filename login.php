@@ -44,6 +44,19 @@ if (login_check($mysqli) == true) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Parallax Login-->
+        <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+        <style>
+          body{
+            background: url(http://mymaplist.com/img/parallax/back.png);
+            background-color: #444;
+            background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+        }
+
+          .vertical-offset-100{
+              padding-top:100px;
+          }
+        </style>
     </head>
     <body>
       <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -68,6 +81,34 @@ if (login_check($mysqli) == true) {
             </div>
           </nav><br><br><br><br>
           <div class="container" style="max-width: 300px; width:100%;">
+          <div class="row vertical-offset-100">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Por favor inicia sesión</h3>
+                </div>
+                <div class="panel-body">
+                    <form accept-charset="UTF-8" role="form">
+                    <fieldset>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="E-mail" name="email" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input name="remember" type="checkbox" value="Remember Me"> Recordar
+                            </label>
+                        </div>
+                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             <div class="starter-template">
               <?php if (login_check($mysqli) == true) : ?>
         <br><br><br><br>
