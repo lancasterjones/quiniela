@@ -50,7 +50,7 @@ if (login_check($mysqli) == true) {
           body{
             background: url(http://marcadeportiva.com.mx/wp-content/uploads/2015/02/champions-league-2013-2014.jpg);
             background-color: #444;
-            background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+            background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/http://marcadeportiva.com.mx/wp-content/uploads/2015/02/champions-league-2013-2014.jpg);    
         }
 
           .vertical-offset-100{
@@ -130,5 +130,18 @@ if (login_check($mysqli) == true) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $(document).mousemove(function(e){
+               TweenLite.to($('body'), 
+                  .5, 
+                  { css: 
+                      {
+                          backgroundPosition: ""+ parseInt(event.pageX/8) + "px "+parseInt(event.pageY/'12')+"px, "+parseInt(event.pageX/'15')+"px "+parseInt(event.pageY/'15')+"px, "+parseInt(event.pageX/'30')+"px "+parseInt(event.pageY/'30')+"px"
+                      }
+                  });
+            });
+          });
+        </script>
     </body>
 </html>
