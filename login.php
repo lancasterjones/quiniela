@@ -80,35 +80,7 @@ if (login_check($mysqli) == true) {
               </div><!--/.nav-collapse -->
             </div>
           </nav><br><br><br><br>
-          <div class="container" style="max-width: 300px; width:100%;">
-          <div class="row vertical-offset-100">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Por favor inicia sesión</h3>
-                </div>
-                <div class="panel-body">
-                    <form accept-charset="UTF-8" role="form">
-                    <fieldset>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="E-mail" name="email" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input name="remember" type="checkbox" value="Remember Me"> Recordar
-                            </label>
-                        </div>
-                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
-                    </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+          <div class="container">
             <div class="starter-template">
               <?php if (login_check($mysqli) == true) : ?>
         <br><br><br><br>
@@ -122,21 +94,33 @@ if (login_check($mysqli) == true) {
                 echo '<p class="error">¡Error en Login!</p>';
             }
             ?>
-            <form action="includes/process_login.php" method="post" name="login_form">
-              <div class="input-group">
-                <span style="width:88px" class="input-group-addon" id="basic-addon1">@</span>
-                <input type="text" style="width: 180px" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group">
-                <span style="width:88px" class="input-group-addon" id="basic-addon1">Password</span>
-                <input type="text" style="width: 180px" type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div><br>
-              <div class="form-group" style="float:right">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="button" value="Login" onclick="formhash(this.form, this.form.password);" class="btn btn-default">Entrar</button>
+            <div class="row vertical-offset-100">
+              <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title">Please sign in</h3>
+                  </div>
+                  <div class="panel-body">
+                    <form action="includes/process_login.php" method="post" name="login_form">
+                      <fieldset>
+                        <div class="form-group">
+                          <input type="text" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input name="remember" type="checkbox" value="Remember Me"> Recordarme
+                          </label>
+                        </div>
+                        <button type="button" value="Login" onclick="formhash(this.form, this.form.password);" class="btn btn-lg btn-success btn-block">Entrar</button>
+                      </fieldset>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
 
           </p>
       <?php endif; ?>
