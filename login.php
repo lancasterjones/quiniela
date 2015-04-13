@@ -48,7 +48,7 @@ if (login_check($mysqli) == true) {
         <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
         <style>
           body{
-            background: url(http://mymaplist.com/img/parallax/back.png);
+            background: url(http://marcadeportiva.com.mx/wp-content/uploads/2015/02/champions-league-2013-2014.jpg);
             background-color: #444;
             background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
         }
@@ -98,7 +98,7 @@ if (login_check($mysqli) == true) {
               <div class="col-md-4 col-md-offset-4">
                 <div class="panel panel-default">
                   <div class="panel-heading"> 
-                    <h3 class="panel-title">Please sign in</h3>
+                    <h3 class="panel-title">Inicia Sesión</h3>
                   </div>
                   <div class="panel-body">
                     <form action="includes/process_login.php" method="post" name="login_form">
