@@ -64,48 +64,6 @@ sec_session_start();
       <?php if (login_check($mysqli) == true) : ?>
         <h1>Partidos Siguientes</h1>
 
-      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
-    <!-- Default panel contents -->
-        <div class="panel-heading">Octavos de Final</div>
-        <div class="panel-body">
-          <p><strong>1 Punto </strong>por acertar en resultado (Local, Empate, Visitante)</p>
-          <p><strong>2 Puntos </strong>por acertar en marcador</p>
-          <p><strong>3 Puntos </strong>máximo por partido</p>
-        </div>
-
-        <!-- Table -->
-        <table class='table'>
-          <thead><tr>
-            <th>Local</th>
-            <th>Visitante</th>
-            <th>Fecha</th>
-            <th>Pronóstico</th>
-          </tr></thead>
-          <tbody>
-              <?php
-              $sql = "SELECT * FROM view_partidos
-WHERE ronda = 'Octavos'
-AND (view_partidos.fecha BETWEEN DATE_ADD(NOW(), INTERVAL -1 HOUR) AND DATE_ADD(view_partidos.fecha, INTERVAL 1 HOUR))";
-              $result = mysqli_query($conn, $sql);
-              if (mysqli_num_rows($result) > 0) {
-          while($row = mysqli_fetch_array($result))
-            {
-                echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
-                      "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
-                      "<td style='text-align: center;'>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
-                      "<td style='text-align: center;'><a href='/pronosticar.php?p=". ($row['id_partido']*112) . "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
-              } ; } else {
-                echo "<br>Sin Resultados";
-              };
-                //$conn->close(); // Cerrar DB
-                ?>
-          </tbody>
-        </table>
-      </div>
-      <br>
-
-
-
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Cuartos de Final</div>
