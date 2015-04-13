@@ -83,6 +83,9 @@ if (login_check($mysqli) == true) {
           <div class="container">
             <div class="starter-template">
               <?php if (login_check($mysqli) == true) : ?>
+                <script language="javascript">
+                  window.location.href = "http://shampions.vende.io/partidos.php"
+                </script>
         <br><br><br><br>
         <p>Ya estás loggeado.</p>
         <p>Salir</p>
