@@ -97,19 +97,20 @@ sec_session_start();
           <tbody>
               <?php
               $sql = "SELECT * FROM view_partidos
-WHERE ronda = 'Semi Finales'
-AND (view_partidos.fecha BETWEEN DATE_ADD(NOW(), INTERVAL 0 HOUR) AND DATE_ADD(view_partidos.fecha, INTERVAL 1 HOUR))";
+                WHERE ronda = 'Semis'
+                AND (view_partidos.fecha BETWEEN DATE_ADD(NOW(), INTERVAL 0 HOUR) AND DATE_ADD(view_partidos.fecha, INTERVAL 1 HOUR))";
               $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) > 0) {
-          while($row = mysqli_fetch_array($result))
-            {
-                echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
+                while($row = mysqli_fetch_array($result))
+                  {
+                    echo  "<tr><td style='text-align: left;'><img src='". $row['logo_local'] ."' > ". $row['local'] ."</td>" .
                       "<td style='text-align: left;'><img src='". $row['logo_visitante'] ."' > ". $row['visitante'] ."</td>" .
                       "<td style='text-align: center;'>". date('M j g:i A', strtotime($row['fecha'])) ."</td>" .
                       "<td style='text-align: center;'><a href='/pronosticar.php?p=". ($row['id_partido']*112) . "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a></td></tr>" ;
-              } ; } else {
-                echo "<br>Sin Resultados";
-              };
+                  } ; 
+                } else {
+                    echo "<br>Sin Resultados";
+                  };
                 //$conn->close(); // Cerrar DB
                 ?>
           </tbody>
