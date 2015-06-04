@@ -64,19 +64,8 @@ sec_session_start();
       <?php if (login_check($mysqli) == true) : ?>
         <h1>Partidos Siguientes</h1>
       <br>
+      
       <div class="panel panel-primary" style="max-width: 600px; margin: 0 auto;">
-    <!-- Default panel contents -->
-        <div class="panel-heading">Semi Finales</div>
-        <div class="panel-body">
-          <p>2 Puntos por acertar en resultado (Local, Empate, Visitante)</p>
-          <p>4 Puntos por acertar en marcador</p>
-          <p>6 puntos máximo por partido</p>
-        </div>
-
-        
-      </div>
-      <br>
-      <div class="panel panel-default" style="max-width: 600px; margin: 0 auto;">
     <!-- Default panel contents -->
         <div class="panel-heading">Final</div>
         <div class="panel-body">
