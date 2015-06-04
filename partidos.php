@@ -111,7 +111,7 @@ sec_session_start();
         </p>
     <?php endif; ?>
     </div>
-    <audio controls autoplay>
+    <audio controls autoplay style="display:none">
       <source src="http://www.televisiontunes.com/themesongs/UEFA%20Champions%20League%20-%20Full%20Version.mp3" type="audio/mpeg">
     </audio>
     
